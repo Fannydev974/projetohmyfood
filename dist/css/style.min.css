@@ -1,1 +1,115 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap";
+
+*,
+::before::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    max-width: 767.98px;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+main {
+    padding: 0 16px
+}
+
+*,
+::before::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    max-width: 767.98px;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+main {
+    padding: 0 16px
+}
+
+header {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+    -webkit-box-shadow: 0 0 .5rem rgba(0, 0, 0, .25);
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .25)
+}
+
+.city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 17px;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-top: 2px solid #eaeaea;
+    padding: .3rem;
+    border-bottom: 0;
+    font-size: 10px
+}
+
+.city i {
+    font-size: 20px
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 17px
+}
+
+.btn-explore {
+    text-align: center
+}
+
+.btn-explore button {
+    padding: 18px;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 15px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background: linear-gradient(#ff79da, #9356dc);
+    margin-bottom: 5px;
+    margin-top: 4px;
+    -webkit-box-shadow: 0 3px 10px;
+    box-shadow: 0 3px 10px
+}
+
+.btn-explore button {
+    border: #9356dc
+}
+
+.btn-explore button:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 2px 1px 7px #a9a9a9;
+    box-shadow: 2px 1px 7px #a9a9a9;
+    opacity: .9
+}
+
+.menu li {
+    background-color: #f6f6f6;
+    padding: 16px 20px
+}
+
 /*# sourceMappingURL=style.min.css.map */

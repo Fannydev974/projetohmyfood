@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "sources": [
+        "../../sass/layout/menu.scss"
+    ],
+    "names": [],
+    "mappings": "AACI,SACI,wBAAA,CACA,iBAAA",
+    "file": "menu.min.css"
+}
