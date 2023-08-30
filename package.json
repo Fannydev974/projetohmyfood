@@ -1,0 +1,22 @@
+{
+  "name": "projetohmyfood",
+  "version": "1.0.0",
+  "description": "Mon projet openclassrooms Ohmyfood 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fannydev974/projetohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fannydev974/projetohmyfood/issues"
+  },
+  "homepage": "https://github.com/Fannydev974/projetohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.66.1"
+  }
+}
