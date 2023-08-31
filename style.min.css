@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 *,
 ::before::after {
@@ -69,23 +70,46 @@ h3 {
   opacity: 0.9;
 }
 
+.menu {
+  counter-reset: section;
+  /*a la place de <span> pour changer*/
+}
 .menu ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
 }
 @media (max-width: 767px) {
   .menu ol {
     flex-direction: column;
   }
 }
-.menu ol li {
+.menu li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
-  padding: 16px 20px;
-  border: 1px solid red;
+  padding: 20px 20px;
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 8px -3px black;
+}
+.menu li::before {
+  /*content obligatoire même vide sinon ça marche pas*/
+  content: counter(section);
+  counter-increment: section;
+  color: white;
+  background-color: #9356dc;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 16px;
+  left: -16px;
+}
+.menu i.fas {
+  margin-right: 16px;
 }
 
 /*# sourceMappingURL=style.min.css.map */

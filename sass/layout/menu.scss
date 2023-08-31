@@ -1,23 +1,52 @@
 @use "../assets/box-shadow";
+@use "../utils/variables";
+@use "../utils/colors";
 
 .menu {
+    counter-reset: section;
+    /*a la place de <span> pour changer*/
+
     & ol {
         display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
+        gap: 20px;
 
         @media (max-width:767px) {
             flex-direction: column;
         }
+    }
+
+    & li {
+        position: relative;
+
+        &::before {
+            /*content obligatoire même vide sinon ça marche pas*/
+            content: counter(section);
+            counter-increment: section;
+            color: white;
+            background-color: colors.$primary;
+            width: 2 *variables.$menu-base-height;
+            height: 2 *variables.$menu-base-height;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: variables.$menu-base-height;
+            left: -1 *variables.$menu-base-height;
+        }
+
+        list-style-type:none;
+        background-color: #f6f6f6;
+        padding: 20px 20px;
+        flex-grow: 1;
+        border-radius: 16px;
+        @include box-shadow.base-shadow;
 
 
-        & li {
-            background-color: #f6f6f6;
-            padding: 16px 20px;
-            border: 1px solid red;
-            flex-grow: 1;
-            border-radius: 16px;
-            @include box-shadow.base-shadow;
+        & i.fas {
+            margin-right: 16px;
+            color: colors.$lightgrey;
+            font-size: 20px;
         }
     }
 }
