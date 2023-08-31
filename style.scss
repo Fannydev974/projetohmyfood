@@ -1,7 +1,5 @@
- @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
- @import "./sass/base";
- @import "./sass/base";
- @import "./sass/layout/header";
- @import "./sass/layout/city";
- @import "./sass/layout/explore";
- @import "./sass/layout/menu";
+@use "./sass/base";
+@use "./sass/layout/header";
+@use "./sass/layout/city";
+@use "./sass/layout/explore";
+@use "./sass/layout/menu";

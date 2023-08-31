@@ -1,23 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-*,
-::before::after {
-  box-sizing: border-box;
-}
-
-/*Loader*/
-body {
-  max-width: 767.98px;
-  font-family: "Roboto", sans-serif;
-  margin: 0px;
-  flex-direction: column;
-}
-
-main {
-  padding: 0 16px;
-}
-
 *,
 ::before::after {
   box-sizing: border-box;
@@ -76,7 +57,8 @@ h3 {
   background: linear-gradient(#ff79da, #9356dc);
   margin-bottom: 5px;
   margin-top: 4px;
-  box-shadow: 0 3px 10px;
+  box-shadow: 2px 1px 8px -3px black;
+  box-shadow: 2px 1px 8px -3px black;
 }
 .btn-explore button {
   border: #9356dc;
@@ -87,9 +69,23 @@ h3 {
   opacity: 0.9;
 }
 
-.menu li {
+.menu ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media (max-width: 767px) {
+  .menu ol {
+    flex-direction: column;
+  }
+}
+.menu ol li {
   background-color: #f6f6f6;
   padding: 16px 20px;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 16px;
+  box-shadow: 2px 1px 8px -3px black;
 }
 
 /*# sourceMappingURL=style.min.css.map */

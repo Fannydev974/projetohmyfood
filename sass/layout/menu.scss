@@ -1,6 +1,23 @@
+@use "../assets/box-shadow";
+
 .menu {
-    & li {
-        background-color: #f6f6f6;
-        padding: 16px 20px;
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+
+
+        & li {
+            background-color: #f6f6f6;
+            padding: 16px 20px;
+            border: 1px solid red;
+            flex-grow: 1;
+            border-radius: 16px;
+            @include box-shadow.base-shadow;
+        }
     }
 }
