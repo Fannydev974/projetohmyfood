@@ -1,10 +1,9 @@
-@import "../assets/box-shadow";
-@import "../utils/_variables";
-@import "../utils/_colors";
+@import "utilities/variables";
+@import "utilities/colors";
 
 .menu {
     counter-reset: section;
-    /*a la place de <span> pour changer*/
+    /*a la place de <span> pour changer. Numérotation automatique*/
 
     & ol {
         display: flex;
@@ -39,7 +38,6 @@
         padding: 20px 20px;
         flex-grow: 1;
         border-radius: 16px;
-        @include box-shadow.base-shadow;
 
 
         & i.fas {

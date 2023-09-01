@@ -2,7 +2,7 @@
     "version": 3,
     "sourceRoot": "",
     "sources": [
-        "style.scss"
+        "style.min.css"
     ],
     "names": [],
     "mappings": "AAAS;AAER;AAAA;EAEI;;;AAGJ;AAGA;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;;;AAGJ;AAEA;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA",

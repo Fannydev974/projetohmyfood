@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/layout/menu.scss"],"names":[],"mappings":"AACI;EACI;EACA","file":"menu.css"}
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": [
+        "../../sass/layout/menu.scss"
+    ],
+    "names": [],
+    "mappings": "AACI;EACI;EACA",
+    "file": "menu.css"
+}

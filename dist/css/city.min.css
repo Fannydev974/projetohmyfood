@@ -1,1 +1,18 @@
-.city{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:17px;text-align:center;background-color:#f6f6f6;border-top:2px solid #eaeaea;padding:.3rem;border-bottom:0;font-size:10px}.city i{font-size:20px}/*# sourceMappingURL=city.min.css.map */
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    text-align: center;
+    background-color: #f6f6f6;
+    border-top: 2px solid #eaeaea;
+    padding: .3rem;
+    border-bottom: 0;
+    font-size: 10px
+}
+
+.city i {
+    font-size: 20px;
+}
+
+/*# sourceMappingURL=city.min.css.map */
