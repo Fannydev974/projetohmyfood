@@ -1,6 +1,6 @@
-@use "../assets/box-shadow";
-@use "../utils/variables";
-@use "../utils/colors";
+@import "../assets/box-shadow";
+@import "../utils/_variables";
+@import "../utils/_colors";
 
 .menu {
     counter-reset: section;
@@ -31,7 +31,6 @@
             justify-content: center;
             border-radius: 50%;
             position: absolute;
-            bottom: variables.$menu-base-height;
             left: -1 *variables.$menu-base-height;
         }
 
