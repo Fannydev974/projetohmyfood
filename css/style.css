@@ -1,18 +1,139 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "utilities/variables";
- *   |         ^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\layout\_menu.scss 1:9  @import
- *   sass\main.scss 5:9          root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"utilities/variables\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\layout\\_menu.scss 1:9  @import\a   sass\\main.scss 5:9          root stylesheet";
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+*,
+::before::after {
+  box-sizing: border-box;
 }
+
+/*Loader*/
+body {
+  max-width: 767.98px;
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  flex-direction: column;
+}
+
+main {
+  padding: 0 7rem;
+}
+
+header {
+  text-align: center;
+  background-color: #FFF;
+  padding: 15px;
+  position: relative;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  text-align: center;
+  background-color: #F6F6F6;
+  border-top: 2px solid #EAEAEA;
+  padding: 0.3rem;
+  border-bottom: 0;
+  font-size: 10px;
+}
+.city i {
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/*btn-explore*/
+.btn-explore {
+  text-align: center;
+}
+.btn-explore button {
+  padding: 18px;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  background: linear-gradient(#ff79da, #9356dc);
+  margin-bottom: 5px;
+  margin-top: 4px;
+  box-shadow: 2px 1px 8px -3px black;
+}
+.btn-explore button {
+  border: #9356dc;
+}
+.btn-explore button:hover {
+  cursor: pointer;
+  box-shadow: 2px 1px 7px darkgray;
+  opacity: 0.9;
+}
+
+.menu {
+  counter-reset: section;
+  /*a la place de <span> pour changer. Numérotation automatique*/
+}
+.menu h2 {
+  padding-left: 2%;
+}
+.menu ol {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .menu ol {
+    flex-direction: column;
+  }
+}
+.menu li {
+  position: relative;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 20px 20px;
+  flex-grow: 1;
+  border-radius: 16px;
+}
+.menu li::before {
+  /*content obligatoire même vide sinon ça marche pas*/
+  content: counter(section);
+  counter-increment: section;
+  color: white;
+  background-color: #9356dc;
+  width: 2 16px;
+  height: 2 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  left: -1 16px;
+}
+.menu li i.fas {
+  margin-right: 16px;
+  color: #7e7e7e;
+  font-size: 20px;
+}
+
+.cartes {
+  background-color: #f6f6f6;
+}
+.cartes h2 {
+  margin-bottom: 20px;
+}
+.cartes .cartes_menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.cartes .card {
+  border: 1px solid black;
+  height: 30px;
+  flex-grow: 1;
+}
+.cartes .card img {
+  width: 20px;
+  height: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
