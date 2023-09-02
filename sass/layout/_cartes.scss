@@ -18,5 +18,10 @@
         border: 1px solid black;
         height: 30px;
         flex-grow: 1;
+
+        & img {
+            width: 20px;
+            height: 15px;
+        }
     }
 }
