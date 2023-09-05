@@ -1,0 +1,39 @@
+/*btn-explore*/
+
+.btn-explore {
+    text-align: center;
+    background-color: $background;
+
+    h1 {
+        font-weight: bold;
+        font-size: 30px;
+        padding-top: 10%;
+    }
+
+    p {
+        margin-top: 5%;
+        margin-bottom: 8%;
+    }
+
+    & button {
+        padding: 18px;
+        color: white;
+        border-radius: 50px;
+        font-size: 15px;
+        background: linear-gradient($secondary, $primary);
+        margin-bottom: 5px;
+        margin-top: 4px;
+        box-shadow: 2px 1px 8px -3px black;
+    }
+
+    & button {
+        margin-bottom: 10%;
+        border: $primary;
+    }
+
+    & button:hover {
+        cursor: pointer;
+        box-shadow: 2px 1px 7px darkgray;
+        opacity: 0.9;
+    }
+}

@@ -1,20 +1,13 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-*,
-::before::after {
+* {
+  margin: 0;
   box-sizing: border-box;
 }
 
 /*Loader*/
 body {
-  max-width: 767.98px;
   font-family: "Roboto", sans-serif;
-  margin: 0px;
-  flex-direction: column;
-}
-
-main {
-  padding: 0 7rem;
+  margin: 0;
 }
 
 header {
@@ -25,7 +18,7 @@ header {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
 
-.city {
+#city {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,18 +30,28 @@ header {
   border-bottom: 0;
   font-size: 10px;
 }
-.city i {
+#city i {
   font-size: 20px;
+  padding-left: 40px;
 }
-
-h3 {
-  font-weight: bold;
-  font-size: 17px;
+#city input {
+  border: 0;
+  background-color: #F6F6F6;
 }
 
 /*btn-explore*/
 .btn-explore {
   text-align: center;
+  background-color: #F6F6F6;
+}
+.btn-explore h1 {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10%;
+}
+.btn-explore p {
+  margin-top: 5%;
+  margin-bottom: 8%;
 }
 .btn-explore button {
   padding: 18px;
@@ -61,6 +64,7 @@ h3 {
   box-shadow: 2px 1px 8px -3px black;
 }
 .btn-explore button {
+  margin-bottom: 10%;
   border: #9356dc;
 }
 .btn-explore button:hover {
@@ -69,71 +73,84 @@ h3 {
   opacity: 0.9;
 }
 
-.menu {
+.fonctionnement {
   counter-reset: section;
   /*a la place de <span> pour changer. Numérotation automatique*/
 }
-.menu h2 {
-  padding-left: 2%;
+.fonctionnement h2 {
+  padding-left: 3%;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
-.menu ol {
+.fonctionnement ol {
   display: flex;
   gap: 20px;
+  margin-bottom: 15%;
 }
 @media (max-width: 767px) {
-  .menu ol {
+  .fonctionnement ol {
     flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
-.menu li {
+.fonctionnement li {
   position: relative;
   list-style-type: none;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding: 20px 20px;
   flex-grow: 1;
   border-radius: 16px;
+  box-shadow: 2px 1px 7px -3px #7e7e7e;
 }
-.menu li::before {
+.fonctionnement li::before {
   /*content obligatoire même vide sinon ça marche pas*/
   content: counter(section);
   counter-increment: section;
   color: white;
   background-color: #9356dc;
-  width: 2 16px;
-  height: 2 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  left: -1 16px;
+  margin-left: -5%;
+  width: 20px;
+  height: 20px;
 }
-.menu li i.fas {
+.fonctionnement li i.fas {
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 20px;
+  padding-left: 3%;
+}
+.fonctionnement li i.fa-store {
+  color: #9356dc;
 }
 
-.cartes {
+.cards {
   background-color: #f6f6f6;
 }
-.cartes h2 {
+.cards h2 {
   margin-bottom: 20px;
+  padding-left: 3%;
 }
-.cartes .cartes_menu {
+.cards .cards_menu {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
+  margin: 5%;
 }
-.cartes .card {
-  border: 1px solid black;
-  height: 30px;
+.cards .card {
+  height: 170px;
   flex-grow: 1;
 }
-.cartes .card img {
-  width: 20px;
-  height: 15px;
+.cards .card img {
+  width: 100%;
+  height: 170px;
+  background-size: cover;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

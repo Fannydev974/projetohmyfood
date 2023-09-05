@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <!--Fonts Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/s.13.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/df22ae2d49.js" crossorigin="anonymous"></script>
     <!--Google Fonts-->
     <link rel="préconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/df22ae2d49.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -30,17 +30,17 @@
 
     <main>
         <!--Ceci est la localisation-->
-        <div class="city">
+        <form id="city">
             <i class="fa-solid fa-location-dot"></i>
-            <h3>Paris, Belleville</h3>
-        </div>
+            <input type="text" name="localisation" placeholder="Paris, Belleville">
+        </form>
         <section class="btn-explore">
-            <h2>Réservez le menu qui<br>vous convient</h2>
+            <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button>Explorer nos restaurants</button>
         </section>
 
-        <section class="menu">
+        <section class="fonctionnement">
             <h2>Fonctionnement</h2>
             <ol>
                 <li><i class="fas fa-mobile-alt">
@@ -52,22 +52,36 @@
             </ol>
         </section>
 
-        <section class="cartes">
+        <section class="cards">
             <h2>Restaurants</h2>
-            <div class="cartes_menu">
+            <article class="cards_menu">
                 <a href="#" class="card">
-                    <img src="images/restaurants/menu1.png" alt="menu1">
+                    <img src="assets/restaurants/La_palette_du_gout.png" alt="La palette du goût">
+                    <h3>La palette du goût</h3>
+                    <p>Ménilmontant</p>
                 </a>
+            </article>
+            <article class="cards_menu">
                 <a href="#" class="card">
-                    <img src="images/restaurants/menu2.png" alt="menu2">
+                    <img src="assets/restaurants/La_note_enchantee.png" alt="La note enchantée">
+                    <h3>La note enchantée</h3>
+                    <p>Charonne</p>
                 </a>
+            </article>
+            <article class="cards_menu">
                 <a href="#" class="card">
-                    <img src="images/restaurants/menu3.png" alt="menu3">
+                    <img src="assets/restaurants/A_la_francaise.png" alt="A la francaise">
+                    <h3>A la française</h3>
+                    <p>Cité Rouge</p>
                 </a>
+            </article>
+            <article class="cards_menu">
                 <a href="#" class="card">
-                    <img src="images/restaurants/menu4.png" alt="menu4">
+                    <img src="assets/restaurants/le_delice_des_sens.png" alt="le delice des sens">
+                    <h3>Le délice des sens</h3>
+                    <p>Folie-Méricourt</p>
                 </a>
-            </div>
+            </article>
         </section>
 
 

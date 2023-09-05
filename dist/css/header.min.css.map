@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "sources": [
-        "../../sass/layout/header.scss"
-    ],
-    "names": [],
-    "mappings": "AAAA,OACI,iBAAA,CACA,qBAAA,CACA,YAAA,CACA,iBAAA,CACA,4CAAA,CAAA,oCAAA",
-    "file": "header.min.css"
-}
