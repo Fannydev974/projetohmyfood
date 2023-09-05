@@ -1,0 +1,45 @@
+.bloc_footer {
+    background-color: $black;
+
+
+    & .text {
+        padding-top: 3%;
+        font-size: 18px;
+        color: $white;
+        font-family: Shrikhand;
+        padding-left: 5%;
+
+    }
+
+    & .choice h4 {
+        color: $white;
+        padding-left: 12%;
+        font-family: Roboto;
+        margin-top: -5%;
+    }
+
+    & .choice .logo_footer {
+        display: inline;
+    }
+
+    & .choice img {
+        padding-left: 5%;
+        padding-top: 3%;
+        display: flex;
+        width: auto;
+        height: auto;
+
+    }
+
+    & .mentions {
+        color: $white;
+        padding-left: 5%;
+        display: flex;
+    }
+
+    & .contact {
+        padding-left: 5%;
+        color: $white;
+        display: flex;
+    }
+}

@@ -114,7 +114,7 @@ header {
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  margin-left: -5%;
+  margin-left: -9%;
   width: 20px;
   height: 20px;
 }
@@ -175,6 +175,43 @@ header {
   background-size: cover;
   border-radius: 20px 20px 0 0;
   margin-bottom: 2%;
+}
+
+.bloc_footer {
+  background-color: #101010;
+}
+.bloc_footer .text {
+  padding-top: 3%;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-family: Shrikhand;
+  padding-left: 5%;
+}
+.bloc_footer .choice h4 {
+  color: #FFFFFF;
+  padding-left: 12%;
+  font-family: Roboto;
+  margin-top: -5%;
+}
+.bloc_footer .choice .logo_footer {
+  display: inline;
+}
+.bloc_footer .choice img {
+  padding-left: 5%;
+  padding-top: 3%;
+  display: flex;
+  width: auto;
+  height: auto;
+}
+.bloc_footer .mentions {
+  color: #FFFFFF;
+  padding-left: 5%;
+  display: flex;
+}
+.bloc_footer .contact {
+  padding-left: 5%;
+  color: #FFFFFF;
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
