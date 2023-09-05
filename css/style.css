@@ -129,28 +129,52 @@ header {
 }
 
 .cards {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
+  padding-bottom: 5%;
 }
 .cards h2 {
   margin-bottom: 20px;
-  padding-left: 3%;
+  margin-left: 3%;
+  padding-top: 5%;
 }
-.cards .cards_menu {
+.cards .cards .cards_menu {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 60px;
   margin: 5%;
+  margin-bottom: 2%;
+  background-color: #FFF;
+  border: solid 1px #FFF;
+  box-shadow: 5px 5px 5px #FFF;
+}
+.cards .cards_menu {
+  margin-bottom: 10%;
+  border: 1px solid #FFF;
+  background-color: white;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 20px;
+}
+.cards .cards_menu h3 {
+  margin-bottom: 2%;
+  padding-left: 2%;
+  color: #101010;
+}
+.cards .cards_menu .places {
+  padding-left: 2%;
+  margin-bottom: 3%;
+  color: #101010;
 }
 .cards .card {
-  height: 170px;
   flex-grow: 1;
 }
 .cards .card img {
   width: 100%;
   height: 170px;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */
