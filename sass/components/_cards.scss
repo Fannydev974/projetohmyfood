@@ -2,11 +2,25 @@
     background-color: $background;
     padding-bottom: 5%;
 
+    @media (min-width:768px) and (max-width:1440px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 28px;
+        justify-content: center;
+        padding-bottom: 0;
+    }
 
     h2 {
         margin-bottom: 20px;
         margin-left: 3%;
         padding-top: 5%;
+
+        @media (min-width:768px) and (max-width:1440px) {
+            width: 100%;
+            padding-top: 3%;
+            margin-left: 15%;
+        }
     }
 
     .cards .cards_menu {
@@ -16,18 +30,49 @@
         gap: 60px;
         margin: 5%;
         margin-bottom: 2%;
-        background-color: #FFF;
-        border: solid 1px #FFF;
-        box-shadow: 5px 5px 5px #FFF;
+        background-color: $white;
+        border: solid 1px $white;
+        box-shadow: 5px 5px 5px $white;
+
+        @media (min-width:768px) and (max-width:1440px) {
+            width: 200px;
+        }
     }
+
 
     .cards_menu {
         margin-bottom: 10%;
-        border: 1px solid #FFF;
-        background-color: white;
+        border: 1px solid $white;
+        background-color: $white;
         margin-left: 3%;
         margin-right: 3%;
         border-radius: 20px;
+        position: relative;
+
+        span {
+            display: flex;
+            float: right;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 15px;
+            width: 80px;
+            height: 30px;
+            justify-content: center;
+            background-color: $tertiary;
+            padding-top: 4px;
+            color: darken($tertiary, 50%);
+            /*Darken pour foncer la couleur sinon mettre color $grenn-font*/
+
+            @media (min-width:768px) and (max-width:1440px) {
+                margin-left: 350px;
+            }
+
+        }
+
+        @media (min-width:768px) and (max-width:1440px) {
+            margin-bottom: 2%;
+        }
+
 
         & h3 {
             margin-bottom: 2%;
@@ -39,6 +84,13 @@
             padding-left: 2%;
             margin-bottom: 3%;
             color: $black;
+        }
+
+        & i {
+            font-size: 25px;
+            position: absolute;
+            right: 15px;
+            top: 80%;
         }
     }
 
@@ -52,7 +104,14 @@
             background-size: cover;
             border-radius: 20px 20px 0 0;
             margin-bottom: 2%;
-        }
 
+
+            @media (min-width:768px) and (max-width:1440px) {
+                height: 251px;
+                width: 450px;
+                object-fit: cover;
+            }
+
+        }
     }
 }

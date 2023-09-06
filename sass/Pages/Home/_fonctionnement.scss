@@ -1,9 +1,17 @@
 .fonctionnement {
+    @media (min-width:768px) and (max-width:1440px) {
+        padding: 50px 180px;
+
+    }
 
     & h2 {
         padding-left: 3%;
         margin-top: 10%;
         margin-bottom: 5%;
+
+        @media (min-width:768px) and (max-width:1440px) {
+            margin-top: 2%;
+        }
     }
 
     counter-reset: section;
@@ -18,6 +26,10 @@
             flex-direction: column;
             padding-left: 15px;
             padding-right: 15px;
+        }
+
+        @media (min-width:768px) and (max-width:1440px) {
+            margin-bottom: 3%;
         }
     }
 

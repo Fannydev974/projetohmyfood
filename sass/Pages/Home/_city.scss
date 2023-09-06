@@ -4,12 +4,16 @@
     justify-content: center;
     gap: 17px;
     text-align: center;
-    background-color: $background;
+    background-color: $grey2;
     border-top: 2px solid $grey2;
     padding: 0.3rem;
     border-bottom: 0;
     font-size: 10px;
 
+    @media (max-width:1440px) {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
 
     & i {
         font-size: 20px;
@@ -18,8 +22,7 @@
 
     & input {
         border: 0;
-        background-color: $background;
-
+        background-color: $grey2;
     }
 
 }
