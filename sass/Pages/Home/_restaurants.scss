@@ -41,22 +41,78 @@
 .main-resto {
     padding: 0 8px;
     background: $background;
-}
-
-.menus {
-    background-color: $background;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr;
-}
-
-.menus-category {
-    border: 1px solid red;
-    background-color: $white;
 
 
+    .menus {
+        background-color: $background;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
 
-    & .menu-items {
-        display: flex;
+
+        h3 {
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 4px;
+                width: 30px;
+                background-color: $tertiary;
+                position: absolute;
+                top: 25px;
+                left: 1px;
+            }
+        }
+
+        .menus-category {
+            background-color: $white;
+            border-radius: 20px;
+
+            .menu-item {
+                display: flex;
+                overflow: hidden;
+                /*pour faire disparaitre ce qui dépasse du cadre*/
+                box-shadow: 2px 1px 7px -3px $lightgrey;
+                border-radius: 20px;
+
+                .price {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 10px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                .menu-item__description {
+                    padding: 10px;
+                }
+
+
+                .menu-item__clic {
+                    background-color: $tertiary;
+                    margin-right: -25px;
+                    width: 25px;
+                    border-radius: 0 20px 20px 0;
+                }
+
+                &:hover .menu-item__clic {
+                    margin-right: 0;
+                }
+
+
+                .order {
+                    padding: 18px;
+                    color: white;
+                    border-radius: 50px;
+                    font-size: 15px;
+                    background: linear-gradient($secondary, $primary);
+                    margin-top: 4px;
+                    box-shadow: 2px 1px 8px -3px black;
+                    margin-bottom: 10%;
+                    border: $primary;
+                }
+            }
+        }
+
     }
 }

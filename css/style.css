@@ -428,20 +428,64 @@ header {
   padding: 0 8px;
   background: #F6F6F6;
 }
-
-.menus {
+.main-resto .menus {
   background-color: #F6F6F6;
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr;
 }
-
-.menus-category {
-  border: 1px solid red;
-  background-color: #FFFFFF;
+.main-resto .menus h3 {
+  position: relative;
 }
-.menus-category .menu-items {
+.main-resto .menus h3::after {
+  content: "";
+  height: 4px;
+  width: 30px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 25px;
+  left: 1px;
+}
+.main-resto .menus .menus-category {
+  background-color: #FFFFFF;
+  border-radius: 20px;
+}
+.main-resto .menus .menus-category .menu-item {
   display: flex;
+  overflow: hidden;
+  /*pour faire disparaitre ce qui dépasse du cadre*/
+  box-shadow: 2px 1px 7px -3px #7e7e7e;
+  border-radius: 20px;
+}
+.main-resto .menus .menus-category .menu-item .price {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.main-resto .menus .menus-category .menu-item .menu-item__description {
+  padding: 10px;
+}
+.main-resto .menus .menus-category .menu-item .menu-item__clic {
+  background-color: #99E2D0;
+  margin-right: -25px;
+  width: 25px;
+  border-radius: 0 20px 20px 0;
+}
+.main-resto .menus .menus-category .menu-item:hover .menu-item__clic {
+  margin-right: 0;
+}
+.main-resto .menus .menus-category .menu-item .order {
+  padding: 18px;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  background: linear-gradient(#ff79da, #9356dc);
+  margin-top: 4px;
+  box-shadow: 2px 1px 8px -3px black;
+  margin-bottom: 10%;
+  border: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
