@@ -1,0 +1,11 @@
+@mixin base-button {
+    padding: 18px;
+    color: white;
+    border-radius: 50px;
+    font-size: 15px;
+    background: linear-gradient($secondary, $primary);
+    margin-top: 4px;
+    box-shadow: 2px 1px 8px -3px black;
+    margin-bottom: 10%;
+    border: $primary;
+}

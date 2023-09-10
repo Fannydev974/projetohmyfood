@@ -393,7 +393,7 @@ header {
 .banner img {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 40vh;
   /*vh = taille de l'ecran hors barre de recherche etc*/
   object-fit: cover;
 }
@@ -404,10 +404,24 @@ header {
   margin-top: -40px;
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .resto__title {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 30px;
+    padding-top: 60px;
+  }
+}
 .resto__title h2 {
   position: relative;
   font-family: "shrikhand", "cursive";
   padding: 10px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .resto__title h2 {
+    display: flex;
+    justify-content: center;
+  }
 }
 .resto__title h2 i {
   font-size: 25px;
@@ -428,6 +442,13 @@ header {
   padding: 0 8px;
   background: #F6F6F6;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .main-resto {
+    margin-bottom: -80px;
+    padding: 120px;
+    padding-top: 10px;
+  }
+}
 .main-resto .menus {
   background-color: #F6F6F6;
   display: grid;
@@ -437,6 +458,12 @@ header {
 .main-resto .menus h3 {
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 1440px) {
+  .main-resto .menus h3 {
+    margin-top: 5%;
+    margin-bottom: 3%;
+  }
+}
 .main-resto .menus h3::after {
   content: "";
   height: 4px;
@@ -445,6 +472,11 @@ header {
   position: absolute;
   top: 25px;
   left: 1px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .main-resto .menus h3::after {
+    top: 40px;
+  }
 }
 .main-resto .menus .menus-category {
   background-color: #FFFFFF;
@@ -456,6 +488,12 @@ header {
   /*pour faire disparaitre ce qui dépasse du cadre*/
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 20px;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  .main-resto .menus .menus-category .menu-item {
+    padding: 0.5%;
+    padding-right: 0;
+  }
 }
 .main-resto .menus .menus-category .menu-item .price {
   margin-left: auto;
@@ -486,6 +524,42 @@ header {
   box-shadow: 2px 1px 8px -3px black;
   margin-bottom: 10%;
   border: #9356dc;
+}
+
+#Page-resto .order {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Page-resto .order button {
+  padding: 18px;
+  color: white;
+  border-radius: 50px;
+  font-size: 15px;
+  background: linear-gradient(#ff79da, #9356dc);
+  margin-top: 4px;
+  box-shadow: 2px 1px 8px -3px black;
+  margin-bottom: 10%;
+  border: #9356dc;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  #Page-resto .order button {
+    padding: 25px;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin: 0;
+  }
+}
+#Page-resto .order button:hover {
+  cursor: pointer;
+  box-shadow: 2px 1px 7px darkgray;
+  opacity: 0.9;
+}
+@media (min-width: 768px) and (max-width: 1440px) {
+  #Page-resto .order .bloc_footer .choice h4 {
+    font-size: small;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
