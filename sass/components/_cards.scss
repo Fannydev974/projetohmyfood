@@ -2,7 +2,7 @@
     background-color: $background;
     padding-bottom: 5%;
 
-    @media (min-width:768px) and (max-width:1440px) {
+    @media (min-width:768px) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -17,7 +17,7 @@
         margin-left: 3%;
         padding-top: 5%;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             width: 100%;
             padding-top: 3%;
             margin-left: 10%;
@@ -35,7 +35,7 @@
         border: solid 1px $white;
         box-shadow: 5px 5px 5px $white;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             width: 200px;
         }
     }
@@ -64,13 +64,13 @@
             color: darken($tertiary, 50%);
             /*Darken pour foncer la couleur sinon mettre color $grenn-font*/
 
-            @media (min-width:768px) and (max-width:1440px) {
+            @media (min-width:768px) {
                 margin-left: 350px;
             }
 
         }
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             margin-bottom: 2%;
         }
 
@@ -87,23 +87,23 @@
             color: $black;
         }
 
+        & #heart {
+            cursor: pointer;
+        }
+
+
         & i {
             font-size: 25px;
             position: absolute;
             right: 15px;
             top: 80%;
-            color: transparent;
             background-clip: border-box;
             -webkit-background-clip: text;
         }
 
-
-
-
-        /*& .fas {
-            background-clip: border-box;
-            -webkit-background-clip: text;
-        }*/
+        & .fas {
+            color: transparent;
+        }
 
         &:hover .fas {
             background-image: linear-gradient(150deg, $primary, $secondary);

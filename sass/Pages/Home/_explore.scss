@@ -8,7 +8,7 @@
         padding-top: 10%;
         color: $black;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             padding-top: 3%;
             font-size: 40px;
         }
@@ -18,24 +18,16 @@
         margin-top: 5%;
         margin-bottom: 8%;
 
-        @media (min-width: 768px) and (max-width:1440px) {
+        @media (min-width: 768px) {
             margin-top: 2%;
             margin-bottom: 2%;
         }
     }
 
     & button {
-        padding: 18px;
-        color: white;
-        border-radius: 50px;
-        font-size: 15px;
-        background: linear-gradient($secondary, $primary);
-        margin-top: 4px;
-        box-shadow: 2px 1px 8px -3px black;
-        margin-bottom: 10%;
-        border: $primary;
+        @include base-button;
 
-        @media (min-width: 768px) and (max-width:1440px) {
+        @media (min-width: 768px) {
             margin-bottom: 3%;
         }
 

@@ -2,12 +2,14 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 /*Loader*/
 body {
+  max-width: 1440px;
+  margin: auto;
   font-family: "Roboto", sans-serif;
-  margin: 0;
 }
 
 header {
@@ -18,7 +20,7 @@ header {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
   /*opacité de la couleur*/
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   header {
     padding-top: 2%;
     padding-bottom: 2%;
@@ -37,7 +39,7 @@ header {
   border-bottom: 0;
   font-size: 10px;
 }
-@media (max-width: 1440px) {
+@media (min-width: 768px) {
   #city {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -62,7 +64,7 @@ header {
   padding-top: 10%;
   color: #101010;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .btn-explore h1 {
     padding-top: 3%;
     font-size: 40px;
@@ -72,7 +74,7 @@ header {
   margin-top: 5%;
   margin-bottom: 8%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .btn-explore p {
     margin-top: 2%;
     margin-bottom: 2%;
@@ -89,7 +91,7 @@ header {
   margin-bottom: 10%;
   border: #9356dc;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .btn-explore button {
     margin-bottom: 3%;
   }
@@ -104,7 +106,7 @@ header {
   counter-reset: section;
   /*a la place de <span> pour changer. Numérotation automatique*/
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .fonctionnement {
     padding: 50px 180px;
   }
@@ -114,7 +116,7 @@ header {
   margin-top: 10%;
   margin-bottom: 5%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .fonctionnement h2 {
     margin-top: 2%;
   }
@@ -131,7 +133,7 @@ header {
     padding-right: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .fonctionnement ol {
     margin-bottom: 3%;
   }
@@ -144,6 +146,9 @@ header {
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
+  /*& i.fa-store {
+      color: $primary;
+  }*/
 }
 .fonctionnement li::before {
   /*content obligatoire même vide sinon ça marche pas*/
@@ -166,7 +171,7 @@ header {
   font-size: 20px;
   padding-left: 3%;
 }
-.fonctionnement li i.fa-store {
+.fonctionnement li i.fas:hover {
   color: #9356dc;
 }
 
@@ -174,7 +179,7 @@ header {
   background-color: #F6F6F6;
   padding-bottom: 5%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
@@ -190,7 +195,7 @@ header {
   margin-left: 3%;
   padding-top: 5%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .cards h2 {
     width: 100%;
     padding-top: 3%;
@@ -208,7 +213,7 @@ header {
   border: solid 1px #FFFFFF;
   box-shadow: 5px 5px 5px #FFFFFF;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .cards .cards .cards_menu {
     width: 200px;
   }
@@ -221,10 +226,6 @@ header {
   margin-right: 3%;
   border-radius: 20px;
   position: relative;
-  /*& .fas {
-      background-clip: border-box;
-      -webkit-background-clip: text;
-  }*/
 }
 .cards .cards_menu span {
   display: flex;
@@ -240,12 +241,12 @@ header {
   color: #1b6150;
   /*Darken pour foncer la couleur sinon mettre color $grenn-font*/
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .cards .cards_menu span {
     margin-left: 350px;
   }
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .cards .cards_menu {
     margin-bottom: 2%;
   }
@@ -260,14 +261,19 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
+.cards .cards_menu #heart {
+  cursor: pointer;
+}
 .cards .cards_menu i {
   font-size: 25px;
   position: absolute;
   right: 15px;
   top: 80%;
-  color: transparent;
   background-clip: border-box;
   -webkit-background-clip: text;
+}
+.cards .cards_menu .fas {
+  color: transparent;
 }
 .cards .cards_menu:hover .fas {
   background-image: linear-gradient(150deg, #9356dc, #ff79da);
@@ -293,10 +299,9 @@ header {
 .bloc_footer {
   background-color: #353535;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer {
     justify-content: flex-end;
-    margin-top: 2%;
   }
 }
 .bloc_footer .text {
@@ -307,7 +312,7 @@ header {
   padding-left: 5%;
   padding-bottom: 3%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .text {
     display: flex;
     justify-content: flex-end;
@@ -319,15 +324,16 @@ header {
 .bloc_footer .choice {
   padding-bottom: 3%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .choice {
     display: flex;
     align-items: baseline;
     margin-top: -9%;
     gap: 2%;
     justify-content: flex-end;
-    padding-right: 15%;
+    padding-right: 18%;
     padding-bottom: 5%;
+    font-size: large;
   }
 }
 .bloc_footer .choice h4 {
@@ -337,7 +343,7 @@ header {
   font-family: Roboto;
   margin-top: -5%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .choice h4 {
     width: 20%;
     display: contents;
@@ -346,7 +352,7 @@ header {
 .bloc_footer .choice .logo_footer {
   display: inline;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .choice .logo_footer {
     margin-right: 40%;
     display: contents;
@@ -359,7 +365,7 @@ header {
   width: auto;
   height: auto;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .choice img {
     display: flex;
     padding-right: 1%;
@@ -373,7 +379,7 @@ header {
   display: flex;
   padding-bottom: 3%;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .mentions {
     display: contents;
     padding-left: 10%;
@@ -384,7 +390,7 @@ header {
   color: #FFFFFF;
   display: flex;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .bloc_footer .contact {
     margin-top: -30%;
   }
@@ -393,22 +399,21 @@ header {
 .banner img {
   display: block;
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   /*vh = taille de l'ecran hors barre de recherche etc*/
   object-fit: cover;
 }
 
 .resto__title {
-  border-radius: 16px 16px 0 0;
+  border-radius: 50px 50px 0 0;
   background: #F6F6F6;
   margin-top: -40px;
   position: relative;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .resto__title {
     margin-left: 15%;
     margin-right: 15%;
-    font-size: 30px;
     padding-top: 60px;
   }
 }
@@ -416,8 +421,10 @@ header {
   position: relative;
   font-family: "shrikhand", "cursive";
   padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .resto__title h2 {
     display: flex;
     justify-content: center;
@@ -429,6 +436,11 @@ header {
   right: 40px;
   padding: 5px;
 }
+@media (min-width: 768px) {
+  .resto__title h2 i {
+    right: 330px;
+  }
+}
 .resto__title h2 .fas {
   color: transparent;
   background-clip: border-box;
@@ -439,29 +451,38 @@ header {
 }
 
 .main-resto {
-  padding: 0 8px;
+  display: flex;
+  justify-content: center;
   background: #F6F6F6;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .main-resto {
-    margin-bottom: -80px;
-    padding: 120px;
-    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
   }
 }
 .main-resto .menus {
   background-color: #F6F6F6;
   display: grid;
-  gap: 10px;
+  gap: 25px;
   grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .main-resto .menus {
+    padding-top: 1px;
+    width: 70%;
+  }
 }
 .main-resto .menus h3 {
   position: relative;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .main-resto .menus h3 {
-    margin-top: 5%;
-    margin-bottom: 3%;
+    margin-left: 200px;
   }
 }
 .main-resto .menus h3::after {
@@ -470,26 +491,32 @@ header {
   width: 30px;
   background-color: #99E2D0;
   position: absolute;
-  top: 25px;
-  left: 1px;
+  top: 50px;
+  left: 5px;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .main-resto .menus h3::after {
-    top: 40px;
+    top: 50px;
   }
 }
 .main-resto .menus .menus-category {
   background-color: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .main-resto .menus .menus-category {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
 }
 .main-resto .menus .menus-category .menu-item {
   display: flex;
   overflow: hidden;
   /*pour faire disparaitre ce qui dépasse du cadre*/
   box-shadow: 2px 1px 7px -3px #7e7e7e;
-  border-radius: 20px;
+  border-radius: 10px;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   .main-resto .menus .menus-category .menu-item {
     padding: 0.5%;
     padding-right: 0;
@@ -504,12 +531,26 @@ header {
 }
 .main-resto .menus .menus-category .menu-item .menu-item__description {
   padding: 10px;
+  font-size: 12px;
 }
 .main-resto .menus .menus-category .menu-item .menu-item__clic {
+  display: grid;
+  place-items: center;
   background-color: #99E2D0;
   margin-right: -25px;
   width: 25px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 10px 10px 0;
+  transition: margin-right 0.5s;
+}
+.main-resto .menus .menus-category .menu-item .menu-item__clic i {
+  display: grid;
+  place-items: center;
+  background: #FFFFFF;
+  aspect-ratio: 1;
+  /*pour que le whidth et le height soit */
+  width: 18px;
+  border-radius: 10px;
+  color: #99E2D0;
 }
 .main-resto .menus .menus-category .menu-item:hover .menu-item__clic {
   margin-right: 0;
@@ -543,7 +584,7 @@ header {
   margin-bottom: 10%;
   border: #9356dc;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   #Page-resto .order button {
     padding: 25px;
     padding-left: 8%;
@@ -556,7 +597,7 @@ header {
   box-shadow: 2px 1px 7px darkgray;
   opacity: 0.9;
 }
-@media (min-width: 768px) and (max-width: 1440px) {
+@media (min-width: 768px) {
   #Page-resto .order .bloc_footer .choice h4 {
     font-size: small;
   }

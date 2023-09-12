@@ -1,9 +1,9 @@
 .bloc_footer {
     background-color: #353535;
 
-    @media (min-width:768px) and (max-width:1440px) {
+    @media (min-width:768px) {
         justify-content: flex-end;
-        margin-top: 2%;
+
     }
 
     & .text {
@@ -14,7 +14,7 @@
         padding-left: 5%;
         padding-bottom: 3%;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             display: flex;
             justify-content: flex-end;
             padding: 5%;
@@ -28,14 +28,15 @@
     & .choice {
         padding-bottom: 3%;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             display: flex;
             align-items: baseline;
             margin-top: -9%;
             gap: 2%;
             justify-content: flex-end;
-            padding-right: 15%;
+            padding-right: 18%;
             padding-bottom: 5%;
+            font-size: large;
         }
     }
 
@@ -46,7 +47,7 @@
         font-family: Roboto;
         margin-top: -5%;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             width: 20%;
             display: contents;
 
@@ -57,7 +58,7 @@
     & .choice .logo_footer {
         display: inline;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             margin-right: 40%;
             display: contents;
 
@@ -71,7 +72,7 @@
         width: auto;
         height: auto;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             display: flex;
             padding-right: 1%;
             padding-left: 1%;
@@ -85,7 +86,7 @@
         display: flex;
         padding-bottom: 3%;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             display: contents;
             padding-left: 10%;
         }
@@ -96,7 +97,7 @@
         color: $white;
         display: flex;
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             margin-top: -30%;
 
         }

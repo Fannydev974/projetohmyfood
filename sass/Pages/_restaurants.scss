@@ -1,21 +1,20 @@
 .banner img {
     display: block;
     width: 100%;
-    height: 40vh;
+    height: 20vh;
     /*vh = taille de l'ecran hors barre de recherche etc*/
     object-fit: cover;
 }
 
 .resto__title {
-    border-radius: 16px 16px 0 0;
+    border-radius: 50px 50px 0 0;
     background: $background;
     margin-top: -40px;
     position: relative;
 
-    @media (min-width:768px) and (max-width:1440px) {
+    @media (min-width:768px) {
         margin-left: 15%;
         margin-right: 15%;
-        font-size: 30px;
         padding-top: 60px;
     }
 
@@ -24,8 +23,12 @@
         position: relative;
         font-family: "shrikhand", "cursive";
         padding: 10px;
+        padding-top: 40px;
+        padding-bottom: 30px;
 
-        @media (min-width:768px) and (max-width:1440px) {
+
+
+        @media (min-width:768px) {
             display: flex;
             justify-content: center;
         }
@@ -35,6 +38,11 @@
             position: absolute;
             right: 40px;
             padding: 5px;
+
+            @media (min-width:768px) {
+                right: 330px;
+
+            }
         }
 
         & .fas {
@@ -51,29 +59,38 @@
 }
 
 .main-resto {
-    padding: 0 8px;
+    display: flex;
+    justify-content: center;
     background: $background;
 
 
-    @media (min-width:768px) and (max-width:1440px) {
-        margin-bottom: -80px;
-        padding: 120px;
-        padding-top: 10px;
+    @media (min-width:768px) {
+        display: flex;
+        justify-content: center;
+        background-color: $white;
     }
 
     .menus {
         background-color: $background;
         display: grid;
-        gap: 10px;
+        gap: 25px;
         grid-template-columns: 1fr;
+
+        @media (min-width:768px) {
+            padding-top: 1px;
+            width: 70%;
+        }
 
 
         h3 {
             position: relative;
+            padding-top: 25px;
+            padding-bottom: 5px;
+            padding-left: 5px;
 
-            @media (min-width:768px) and (max-width:1440px) {
-                margin-top: 5%;
-                margin-bottom: 3%;
+            @media (min-width:768px) {
+
+                margin-left: 200px;
             }
 
             &::after {
@@ -82,27 +99,35 @@
                 width: 30px;
                 background-color: $tertiary;
                 position: absolute;
-                top: 25px;
-                left: 1px;
+                top: 50px;
+                left: 5px;
 
-                @media (min-width:768px) and (max-width:1440px) {
-                    top: 40px;
+                @media (min-width:768px) {
+                    top: 50px;
                 }
             }
         }
 
         .menus-category {
             background-color: $white;
-            border-radius: 20px;
+            border-radius: 10px;
+
+            @media (min-width:768px) {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+
 
             .menu-item {
                 display: flex;
                 overflow: hidden;
                 /*pour faire disparaitre ce qui dépasse du cadre*/
                 box-shadow: 2px 1px 7px -3px $lightgrey;
-                border-radius: 20px;
+                border-radius: 10px;
 
-                @media (min-width:768px) and (max-width:1440px) {
+
+
+                @media (min-width:768px) {
                     padding: 0.5%;
                     padding-right: 0;
                 }
@@ -117,14 +142,29 @@
 
                 .menu-item__description {
                     padding: 10px;
+                    font-size: 12px;
                 }
 
 
                 .menu-item__clic {
+                    display: grid;
+                    place-items: center;
                     background-color: $tertiary;
                     margin-right: -25px;
                     width: 25px;
-                    border-radius: 0 20px 20px 0;
+                    border-radius: 0 10px 10px 0;
+                    transition: margin-right 0.5s;
+
+                    i {
+                        display: grid;
+                        place-items: center;
+                        background: $white;
+                        aspect-ratio: 1;
+                        /*pour que le whidth et le height soit */
+                        width: 18px;
+                        border-radius: 10px;
+                        color: $tertiary;
+                    }
                 }
 
                 &:hover .menu-item__clic {
@@ -155,21 +195,13 @@
     align-items: center;
     justify-content: center;
 
-    @media (min-width:768px) and (max-width:1440px) {}
+
 
     button {
-        padding: 18px;
-        color: white;
-        border-radius: 50px;
-        font-size: 15px;
-        background: linear-gradient($secondary, $primary);
-        margin-top: 4px;
-        box-shadow: 2px 1px 8px -3px black;
-        margin-bottom: 10%;
-        border: $primary;
+        @include base-button;
 
 
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             padding: 25px;
             padding-left: 8%;
             padding-right: 8%;
@@ -186,7 +218,7 @@
 
 
     .bloc_footer .choice h4 {
-        @media (min-width:768px) and (max-width:1440px) {
+        @media (min-width:768px) {
             font-size: small;
         }
     }
