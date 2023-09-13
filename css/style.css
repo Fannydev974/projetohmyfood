@@ -261,9 +261,6 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
-.cards .cards_menu #heart {
-  cursor: pointer;
-}
 .cards .cards_menu i {
   font-size: 25px;
   position: absolute;
@@ -277,6 +274,7 @@ header {
 }
 .cards .cards_menu:hover .fas {
   background-image: linear-gradient(150deg, #9356dc, #ff79da);
+  animation: heart 1s;
 }
 .cards .card {
   flex-grow: 1;
@@ -396,6 +394,23 @@ header {
   }
 }
 
+header::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkti-font-smoothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f060";
+  left: 15px;
+  top: 45%;
+  transform: translateY(-50%);
+  /*translateY pour l'axe verticale remonter la flèche de 50% de sa hauteur (-50% c'est sa taille a lui)*/
+  font-size: 20px;
+}
+
 .banner img {
   display: block;
   width: 100%;
@@ -430,11 +445,23 @@ header {
     justify-content: center;
   }
 }
+.resto__title h2 .heart {
+  position: relative;
+  top: -35px;
+  left: 20px;
+}
+@media (min-width: 768px) {
+  .resto__title h2 .heart {
+    position: initial;
+  }
+}
 .resto__title h2 i {
   font-size: 25px;
   position: absolute;
   right: 40px;
   padding: 5px;
+  background-clip: border-box;
+  -webkit-background-clip: text;
 }
 @media (min-width: 768px) {
   .resto__title h2 i {
@@ -443,11 +470,10 @@ header {
 }
 .resto__title h2 .fas {
   color: transparent;
-  background-clip: border-box;
-  -webkit-background-clip: text;
 }
-.resto__title h2 :hover .fas {
+.resto__title h2:hover .fas {
   background-image: linear-gradient(150deg, #9356dc, #ff79da);
+  animation: heart 1s;
 }
 
 .main-resto {
@@ -479,6 +505,10 @@ header {
   padding-top: 25px;
   padding-bottom: 5px;
   padding-left: 5px;
+  text-transform: uppercase;
+  /*mettre le texte en majuscule*/
+  font-weight: lighter;
+  /*pseudo-element pour petite barre verte sous titre*/
 }
 @media (min-width: 768px) {
   .main-resto .menus h3 {
@@ -500,7 +530,6 @@ header {
   }
 }
 .main-resto .menus .menus-category {
-  background-color: #FFFFFF;
   border-radius: 10px;
 }
 @media (min-width: 768px) {
@@ -513,8 +542,19 @@ header {
   display: flex;
   overflow: hidden;
   /*pour faire disparaitre ce qui dépasse du cadre*/
+  background-color: #FFFFFF;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 10px;
+  animation: appear 2s;
+}
+.main-resto .menus .menus-category .menu-item:nth-child(1) {
+  animation-delay: 100ms;
+}
+.main-resto .menus .menus-category .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+.main-resto .menus .menus-category .menu-item:nth-child(3) {
+  animation-delay: 300ms;
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category .menu-item {
@@ -554,6 +594,8 @@ header {
 }
 .main-resto .menus .menus-category .menu-item:hover .menu-item__clic {
   margin-right: 0;
+  margin-top: -10px;
+  margin-bottom: -10px;
 }
 .main-resto .menus .menus-category .menu-item .order {
   padding: 18px;
@@ -597,9 +639,27 @@ header {
   box-shadow: 2px 1px 7px darkgray;
   opacity: 0.9;
 }
+
 @media (min-width: 768px) {
-  #Page-resto .order .bloc_footer .choice h4 {
+  .bloc_footer .choice h4 {
     font-size: small;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 

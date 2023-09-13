@@ -9,3 +9,15 @@
     margin-bottom: 10%;
     border: $primary;
 }
+
+@mixin font-awesome {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkti-font-smoothing: antialiased;
+    font-family: "font Awesome 5 free";
+    font-weight: 900;
+
+}

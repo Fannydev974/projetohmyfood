@@ -75,6 +75,7 @@
         }
 
 
+
         & h3 {
             margin-bottom: 2%;
             padding-left: 2%;
@@ -87,9 +88,6 @@
             color: $black;
         }
 
-        & #heart {
-            cursor: pointer;
-        }
 
 
         & i {
@@ -99,6 +97,7 @@
             top: 80%;
             background-clip: border-box;
             -webkit-background-clip: text;
+
         }
 
         & .fas {
@@ -107,7 +106,9 @@
 
         &:hover .fas {
             background-image: linear-gradient(150deg, $primary, $secondary);
+            animation: heart 1s;
         }
+
 
     }
 
