@@ -261,6 +261,9 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
+.cards .cards_menu .heart {
+  padding: 10px;
+}
 .cards .cards_menu i {
   font-size: 25px;
   position: absolute;
@@ -455,23 +458,23 @@ header::before {
     position: initial;
   }
 }
-.resto__title h2 i {
+.resto__title h2 .heart i {
   font-size: 25px;
   position: absolute;
-  right: 40px;
-  padding: 5px;
+  right: 15px;
+  top: 80%;
   background-clip: border-box;
   -webkit-background-clip: text;
 }
 @media (min-width: 768px) {
-  .resto__title h2 i {
+  .resto__title h2 .heart i {
     right: 330px;
   }
 }
-.resto__title h2 .fas {
+.resto__title h2 .heart .fas {
   color: transparent;
 }
-.resto__title h2:hover .fas {
+.resto__title h2 .heart:hover .fas {
   background-image: linear-gradient(150deg, #9356dc, #ff79da);
   animation: heart 1s;
 }
@@ -648,10 +651,12 @@ header::before {
 
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(-50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes heart {

@@ -31,7 +31,6 @@ header::before {
     }
 
     h2 {
-
         position: relative;
         font-family: "shrikhand", "cursive";
         padding: 10px;
@@ -44,7 +43,7 @@ header::before {
             justify-content: center;
         }
 
-        .heart {
+        & .heart {
             position: relative;
             top: -35px;
             left: 20px;
@@ -52,32 +51,28 @@ header::before {
             @media (min-width:768px) {
                 position: initial;
             }
-        }
 
 
-        & i {
-            font-size: 25px;
-            position: absolute;
-            right: 40px;
-            padding: 5px;
-            background-clip: border-box;
-            -webkit-background-clip: text;
 
-            @media (min-width:768px) {
-                right: 330px;
+            & i {
+                @include heart-far;
 
+                @media (min-width:768px) {
+                    right: 330px;
+
+                }
             }
-        }
 
-        & .fas {
-            color: transparent;
-        }
+            & .fas {
+                color: transparent;
+            }
 
-        &:hover .fas {
-            background-image: linear-gradient(150deg, $primary, $secondary);
-            animation: heart 1s;
-        }
+            &:hover .fas {
+                @include heart-fas-hover;
+            }
 
+
+        }
     }
 }
 
