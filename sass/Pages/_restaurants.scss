@@ -48,11 +48,10 @@ header::before {
             top: -35px;
             left: 20px;
 
+
             @media (min-width:768px) {
                 position: initial;
             }
-
-
 
             & i {
                 @include heart-far;
@@ -70,11 +69,10 @@ header::before {
             &:hover .fas {
                 @include heart-fas-hover;
             }
-
-
         }
     }
 }
+
 
 .main-resto {
     display: flex;

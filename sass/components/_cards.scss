@@ -88,10 +88,6 @@
             color: $black;
         }
 
-        & .heart {
-            padding: 10px;
-        }
-
         & i {
             @include heart-far;
 
@@ -105,9 +101,6 @@
             @include heart-fas-hover;
         }
     }
-
-
-
 
     .card {
         flex-grow: 1;

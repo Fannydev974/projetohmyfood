@@ -26,6 +26,9 @@ header {
     padding-bottom: 2%;
   }
 }
+header::before {
+  visibility: hidden;
+}
 
 #city {
   display: flex;
@@ -102,6 +105,57 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  /*INSET pour mettre toutes les propriétés (top,bottom..) au même valeurs*/
+  background-color: #FFFFFF;
+  z-index: 1;
+  /*Z-INDEX pour mettre un élément au dessus d'un autre donc là le loader au dessus*/
+  opacity: 0.9;
+  animation: disappear 200ms 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  /*1 fois que l'animation est terminée il ne fais plus rien*/
+}
+.loader::after {
+  content: "Ohmyfood";
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  height: 100px;
+  width: 100px;
+  color: #9356dc;
+  font-size: 50px;
+  border: 5px solid transparent;
+  border-top: 5px solid #99E2D0;
+  border-bottom: 5px solid #99E2D0;
+  border-radius: 50%;
+  animation: spin 3s linear;
+}
+@media (min-width: 768px) {
+  .loader::after {
+    height: 150px;
+    width: 150px;
+    font-size: 100px;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  /*on est pas obligé de mettre 0% {} le navigateur sera que c'est automatiquement ce que c'est*/
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .fonctionnement {
   counter-reset: section;
   /*a la place de <span> pour changer. Numérotation automatique*/
@@ -260,9 +314,6 @@ header {
   padding-left: 2%;
   margin-bottom: 3%;
   color: #101010;
-}
-.cards .cards_menu .heart {
-  padding: 10px;
 }
 .cards .cards_menu i {
   font-size: 25px;
