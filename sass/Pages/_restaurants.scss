@@ -24,6 +24,20 @@ header::before {
     margin-top: -40px;
     position: relative;
 
+    & .heart {
+        position: absolute;
+        display: flex;
+        padding-left: 260px;
+        bottom: 40px;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+
+        &::before {
+            padding: 0;
+        }
+    }
+
     @media (min-width:768px) {
         margin-left: 15%;
         margin-right: 15%;
@@ -43,35 +57,25 @@ header::before {
             justify-content: center;
         }
 
-        & .heart {
-            position: relative;
-            top: -35px;
-            left: 20px;
 
+        & i {
+            @include heart-far;
 
             @media (min-width:768px) {
-                position: initial;
+                right: 330px;
             }
+        }
 
-            & i {
-                @include heart-far;
+        & .fas {
+            color: transparent;
+        }
 
-                @media (min-width:768px) {
-                    right: 330px;
-
-                }
-            }
-
-            & .fas {
-                color: transparent;
-            }
-
-            &:hover .fas {
-                @include heart-fas-hover;
-            }
+        &:hover .fas {
+            @include heart-fas-hover;
         }
     }
 }
+
 
 
 .main-resto {
