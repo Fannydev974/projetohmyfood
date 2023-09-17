@@ -31,11 +31,6 @@ header::before {
         bottom: 40px;
         -webkit-background-clip: text;
         background-clip: text;
-
-
-        &::before {
-            padding: 0;
-        }
     }
 
     @media (min-width:768px) {
@@ -64,6 +59,12 @@ header::before {
             @media (min-width:768px) {
                 right: 330px;
             }
+
+            /* .fa-heart::before {
+                content: "\f004";
+                position: absolute;
+                top: -15px;
+            }*/
         }
 
         & .fas {
