@@ -1,7 +1,7 @@
 .fonctionnement {
     @media (min-width:768px) {
         padding: 50px 180px;
-
+        display: inline;
     }
 
     & h2 {
@@ -26,11 +26,21 @@
             flex-direction: column;
             padding-left: 15px;
             padding-right: 15px;
+            margin-bottom: 3%;
+
+
         }
 
         @media (min-width:768px) {
             margin-bottom: 3%;
+            margin-right: 2%;
+
+            & i {
+                display: flex;
+                align-items: center;
+            }
         }
+
     }
 
     & li {
@@ -42,23 +52,35 @@
         border-radius: 16px;
         box-shadow: 2px 1px 7px -3px $lightgrey;
 
+        &:hover {
+            color: $primary;
+        }
+
+        @media (min-width:768px) {
+            display: flex;
+            font-size: 13px;
+        }
+
         &::before {
             /*content obligatoire même vide sinon ça marche pas*/
             content: counter(section);
             counter-increment: section;
             color: white;
-            background-color: $primary;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: $primary;
             border-radius: 50%;
             position: absolute;
             margin-left: -9%;
             width: 20px;
             height: 20px;
+
+            @media (min-width:768px) {
+                top: 20px;
+                left: 30px;
+            }
         }
-
-
 
         & i.fas {
             margin-right: 16px;
@@ -66,14 +88,10 @@
             font-size: 20px;
             padding-left: 3%;
 
-
             &:hover {
                 color: $primary;
             }
         }
 
-        /*& i.fa-store {
-            color: $primary;
-        }*/
     }
 }

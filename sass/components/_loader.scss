@@ -1,0 +1,56 @@
+.loader {
+    $animation-duration: 3s;
+    position: fixed;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    /*INSET pour mettre toutes les propriétés (top,bottom..) au même valeurs*/
+    background-color: $white;
+    z-index: 1;
+    /*Z-INDEX pour mettre un élément au dessus d'un autre donc là le loader au dessus*/
+    animation: disappear 200ms $animation-duration;
+    animation-fill-mode: forwards;
+    animation-delay: $animation-duration;
+    /*1 fois que l'animation est terminée il ne fais plus rien*/
+
+    &::after {
+        content: "Ohmyfood";
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        height: 100px;
+        width: 100px;
+        color: $primary;
+        font-size: 50px;
+        border: 5px solid transparent;
+        border-top: 5px solid $tertiary;
+        border-bottom: 5px solid $tertiary;
+        padding-top: 20px;
+        border-radius: 50%;
+        animation: spin $animation-duration linear;
+
+        @media (min-width:768px) {
+            height: 150px;
+            width: 150px;
+            font-size: 100px;
+        }
+    }
+}
+
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+
+    /*on est pas obligé de mettre 0% {} le navigateur sera que c'est automatiquement ce que c'est*/
+    100% {
+        transform: rotate(360deg);
+    }
+}

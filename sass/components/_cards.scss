@@ -52,10 +52,9 @@
 
         span {
             display: flex;
-            float: right;
             position: absolute;
-            margin-left: 200px;
-            margin-top: 15px;
+            right: 4%;
+            top: 20px;
             width: 80px;
             height: 30px;
             justify-content: center;
@@ -86,6 +85,10 @@
             color: $black;
         }
 
+
+    }
+
+    .heart {
         & i {
             @include heart-far;
 
@@ -110,9 +113,9 @@
             background-size: cover;
             border-radius: 20px 20px 0 0;
             margin-bottom: 2%;
+            object-fit: cover;
 
-
-            @media (min-width:768px) and (max-width:1440px) {
+            @media (min-width:768px) {
                 height: 251px;
                 width: 490px;
                 object-fit: cover;

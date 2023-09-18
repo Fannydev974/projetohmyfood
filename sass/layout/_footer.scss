@@ -1,8 +1,14 @@
 .bloc_footer {
     background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
 
     @media (min-width:768px) {
-        justify-content: flex-end;
+
+        flex-direction: row-reverse;
+        align-items: flex-end;
 
     }
 
@@ -11,14 +17,14 @@
         font-size: 18px;
         color: $white;
         font-family: Shrikhand;
-        padding-left: 5%;
+        padding-left: 2%;
         padding-bottom: 3%;
 
         @media (min-width:768px) {
             display: flex;
             justify-content: flex-end;
             padding: 5%;
-            padding-right: 5%;
+            padding-right: 3%;
             align-items: baseline;
 
         }
@@ -27,25 +33,27 @@
 
     & .choice {
         padding-bottom: 3%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
 
         @media (min-width:768px) {
             display: flex;
+            flex-direction: row;
             align-items: baseline;
-            margin-top: -9%;
-            gap: 2%;
-            justify-content: flex-end;
-            padding-right: 18%;
-            padding-bottom: 5%;
-            font-size: large;
+            position: relative;
+            gap: 8%;
+            width: 50%;
+            font-size: 10px;
+
         }
     }
 
     & .choice h4 {
         color: $white;
-        padding-left: 12%;
-        padding-bottom: 2%;
         font-family: Roboto;
-        margin-top: -5%;
+        padding-left: 40px;
 
         @media (min-width:768px) {
             width: 20%;
@@ -56,7 +64,7 @@
     }
 
     & .choice .logo_footer {
-        display: inline;
+        display: flex;
 
         @media (min-width:768px) {
             margin-right: 40%;
@@ -66,11 +74,9 @@
     }
 
     & .choice img {
-        padding-left: 5%;
-        padding-top: 3%;
         display: flex;
-        width: auto;
-        height: auto;
+        position: relative;
+        left: 15px;
 
         @media (min-width:768px) {
             display: flex;
@@ -87,8 +93,7 @@
         padding-bottom: 3%;
 
         @media (min-width:768px) {
-            display: contents;
-            padding-left: 10%;
+            display: flex;
         }
     }
 
@@ -99,7 +104,7 @@
 
         @media (min-width:768px) {
             margin-top: -30%;
-
+            font-size: smaller;
         }
     }
 }

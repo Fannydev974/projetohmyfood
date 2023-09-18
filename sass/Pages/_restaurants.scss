@@ -1,4 +1,5 @@
-header::before {
+/*flèche du header*/
+#header-menu::before {
     @include font-awesome;
     content: "\f060";
     left: 15px;
@@ -24,14 +25,7 @@ header::before {
     margin-top: -40px;
     position: relative;
 
-    & .heart {
-        position: absolute;
-        display: flex;
-        padding-left: 260px;
-        bottom: 40px;
-        -webkit-background-clip: text;
-        background-clip: text;
-    }
+
 
     @media (min-width:768px) {
         margin-left: 15%;
@@ -53,28 +47,33 @@ header::before {
         }
 
 
-        & i {
-            @include heart-far;
 
-            @media (min-width:768px) {
-                right: 330px;
-            }
+    }
+}
 
-            /* .fa-heart::before {
-                content: "\f004";
-                position: absolute;
-                top: -15px;
-            }*/
-        }
+.heart {
+    position: relative;
+    display: flex;
+    bottom: 60px;
+    -webkit-background-clip: text;
+    background-clip: text;
 
-        & .fas {
-            color: transparent;
-        }
+    & i {
+        @include heart-far;
 
-        &:hover .fas {
-            @include heart-fas-hover;
+        @media (min-width:768px) {
+            right: 330px;
         }
     }
+
+    & .fas {
+        color: transparent;
+    }
+
+    &:hover .fas {
+        @include heart-fas-hover;
+    }
+
 }
 
 
@@ -191,8 +190,6 @@ header::before {
                         display: grid;
                         place-items: center;
                         background: $white;
-                        aspect-ratio: 1;
-                        /*pour que le whidth et le height soit */
                         width: 18px;
                         border-radius: 10px;
                         color: $tertiary;
@@ -246,6 +243,6 @@ header::before {
 
 .bloc_footer .choice h4 {
     @media (min-width:768px) {
-        font-size: small;
+        font-size: 5px;
     }
 }
