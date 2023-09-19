@@ -91,7 +91,7 @@
     .heart {
         & i {
             @include heart-far;
-
+            color: black;
         }
 
         & .fas {

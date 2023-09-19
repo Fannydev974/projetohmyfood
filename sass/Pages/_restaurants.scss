@@ -45,9 +45,6 @@
             display: flex;
             justify-content: center;
         }
-
-
-
     }
 }
 
@@ -72,6 +69,7 @@
 
     &:hover .fas {
         @include heart-fas-hover;
+        animation-direction: alternate;
     }
 
 }
@@ -185,6 +183,11 @@
                     width: 25px;
                     border-radius: 0 10px 10px 0;
                     transition: margin-right 0.5s;
+                    height: auto;
+
+                    @media (min-width:768px) {
+                        height: auto;
+                    }
 
                     i {
                         display: grid;
@@ -200,6 +203,7 @@
                     margin-right: 0;
                     margin-top: -10px;
                     margin-bottom: -10px;
+                    height: auto
                 }
 
 
