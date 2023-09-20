@@ -282,16 +282,16 @@ header {
   -webkit-background-clip: text;
   color: black;
 }
-@media (min-width: 768px) {
-  .cards .heart i {
-    position: relative;
-  }
-}
 .cards .heart .fas {
   color: transparent;
 }
 .cards .heart:hover .fas {
   background-image: linear-gradient(150deg, #9356dc, #ff79da);
+  /*&:not(.far) {
+      @include heart-fas-hover;
+      animation-name: heart;
+      animation-duration: 1s;
+  }*/
 }
 .cards .card {
   flex-grow: 1;
@@ -388,6 +388,7 @@ ul a {
   transform: translateY(-50%);
   /*translateY pour l'axe verticale remonter la flèche de 50% de sa hauteur (-50% c'est sa taille a lui)*/
   font-size: 20px;
+  color: #101010;
 }
 
 .banner img {
@@ -449,8 +450,6 @@ ul a {
   top: 80%;
   background-clip: border-box;
   -webkit-background-clip: text;
-  cursor: pointer;
-  transition-property: transform;
 }
 @media (min-width: 768px) {
   .heart i {
@@ -541,16 +540,21 @@ ul a {
   background-color: #FFFFFF;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 10px;
-  animation: appear 2s;
+  text-overflow: ellipsis;
+  /*...*/
+  white-space: nowrap;
 }
 .main-resto .menus .menus-category .menu-item:nth-child(1) {
   animation-delay: 100ms;
+  text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item:nth-child(2) {
   animation-delay: 200ms;
+  text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item:nth-child(3) {
   animation-delay: 300ms;
+  text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category .menu-item {
@@ -564,10 +568,12 @@ ul a {
   padding: 10px;
   display: flex;
   align-items: flex-end;
+  text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item .menu-item__description {
   padding: 10px;
   font-size: 12px;
+  text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item .menu-item__clic {
   display: grid;
@@ -578,6 +584,7 @@ ul a {
   border-radius: 0 10px 10px 0;
   transition: margin-right 0.5s;
   height: auto;
+  text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category .menu-item .menu-item__clic {
@@ -599,6 +606,7 @@ ul a {
   margin-top: -10px;
   margin-bottom: -10px;
   height: auto;
+  text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item .order {
   padding: 18px;
@@ -659,6 +667,14 @@ ul a {
   }
   100% {
     transform: scale(1);
+  }
+}
+@keyframes notheart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes disappear {

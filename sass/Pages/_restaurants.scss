@@ -7,6 +7,7 @@
     transform: translateY(-50%);
     /*translateY pour l'axe verticale remonter la flèche de 50% de sa hauteur (-50% c'est sa taille a lui)*/
     font-size: 20px;
+    color: $black;
 }
 
 
@@ -68,8 +69,7 @@
 
     & i {
         @include heart-far;
-        cursor: pointer;
-        transition-property: transform;
+
 
         @media (min-width:768px) {
             display: flex;
@@ -78,6 +78,7 @@
 
     & .fas {
         color: transparent;
+
     }
 
     &:hover .fas {
@@ -85,11 +86,11 @@
         animation-name: heart;
         animation-duration: 1s;
 
+
     }
 
+
 }
-
-
 
 .main-resto {
     display: flex;
@@ -164,12 +165,15 @@
                 background-color: $white;
                 box-shadow: 2px 1px 7px -3px $lightgrey;
                 border-radius: 10px;
-                animation: appear 2s;
+                text-overflow: ellipsis;
+                /*...*/
+                white-space: nowrap;
 
 
                 @for $i from 1 through 3 {
                     &:nth-child(#{$i}) {
                         animation-delay: 100ms * $i;
+                        text-overflow: ellipsis;
                     }
                 }
 
@@ -186,11 +190,13 @@
                     padding: 10px;
                     display: flex;
                     align-items: flex-end;
+                    text-overflow: ellipsis;
                 }
 
                 .menu-item__description {
                     padding: 10px;
                     font-size: 12px;
+                    text-overflow: ellipsis;
                 }
 
 
@@ -203,6 +209,7 @@
                     border-radius: 0 10px 10px 0;
                     transition: margin-right 0.5s;
                     height: auto;
+                    text-overflow: ellipsis;
 
                     @media (min-width:768px) {
                         height: auto;
@@ -224,7 +231,8 @@
                     margin-right: 0;
                     margin-top: -10px;
                     margin-bottom: -10px;
-                    height: auto
+                    height: auto;
+                    text-overflow: ellipsis;
                 }
 
 
