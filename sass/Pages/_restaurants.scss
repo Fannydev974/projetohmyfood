@@ -24,7 +24,8 @@
     background: $background;
     margin-top: -40px;
     position: relative;
-
+    display: flex;
+    justify-content: space-around;
 
 
     @media (min-width:768px) {
@@ -40,7 +41,6 @@
         padding-top: 40px;
         padding-bottom: 30px;
 
-
         @media (min-width:768px) {
             display: flex;
             justify-content: center;
@@ -48,18 +48,31 @@
     }
 }
 
+
 .heart {
     position: relative;
     display: flex;
     bottom: 60px;
+    top: -40px;
     -webkit-background-clip: text;
     background-clip: text;
 
+
+
+    @media (min-width:768px) {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
     & i {
         @include heart-far;
+        cursor: pointer;
+        transition-property: transform;
 
         @media (min-width:768px) {
-            right: 330px;
+            display: flex;
         }
     }
 
@@ -69,7 +82,9 @@
 
     &:hover .fas {
         @include heart-fas-hover;
-        animation-direction: alternate;
+        animation-name: heart;
+        animation-duration: 1s;
+
     }
 
 }
@@ -99,7 +114,6 @@
             width: 70%;
         }
 
-
         h3 {
             position: relative;
             padding-top: 25px;
@@ -110,7 +124,7 @@
             font-weight: lighter;
 
             @media (min-width:768px) {
-                margin-left: 200px;
+                margin-left: 150px;
             }
 
             /*pseudo-element pour petite barre verte sous titre*/
@@ -134,8 +148,13 @@
 
 
             @media (min-width:768px) {
-                margin-left: 200px;
+                margin-left: 150px;
                 margin-right: 200px;
+                width: 50%;
+            }
+
+            @media (min-width: 1024px) {
+                width: 70%;
             }
 
             .menu-item {
@@ -187,6 +206,8 @@
 
                     @media (min-width:768px) {
                         height: auto;
+                        margin-top: -10px;
+                        margin-bottom: -10px;
                     }
 
                     i {
@@ -241,12 +262,5 @@
         cursor: pointer;
         box-shadow: 2px 1px 7px darkgray;
         opacity: 0.9;
-    }
-}
-
-
-.bloc_footer .choice h4 {
-    @media (min-width:768px) {
-        font-size: 5px;
     }
 }

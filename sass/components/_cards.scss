@@ -92,6 +92,12 @@
         & i {
             @include heart-far;
             color: black;
+
+            @media (min-width:768px) {
+                position: relative;
+            }
+
+
         }
 
         & .fas {

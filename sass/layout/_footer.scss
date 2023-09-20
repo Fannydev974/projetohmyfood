@@ -1,110 +1,65 @@
-.bloc_footer {
-    background-color: #353535;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
+.footer__section {
+    background-color: $grey;
+    color: $white;
+    padding-bottom: 10px;
 
-    @media (min-width:768px) {
-
+    @media (min-width:1024px) {
+        display: flex;
         flex-direction: row-reverse;
-        align-items: flex-end;
-
     }
 
-    & .text {
-        padding-top: 5%;
-        font-size: 18px;
+
+    & h1.logo {
         color: $white;
-        font-family: Shrikhand;
-        padding-left: 2%;
-        padding-bottom: 3%;
-
-        @media (min-width:768px) {
-            display: flex;
-            justify-content: flex-end;
-            padding: 5%;
-            padding-right: 3%;
-            align-items: baseline;
-
-        }
-
-    }
-
-    & .choice {
-        padding-bottom: 3%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-
-        @media (min-width:768px) {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            position: relative;
-            gap: 8%;
-            width: 50%;
-            font-size: 10px;
-
-        }
-    }
-
-    & .choice h4 {
-        color: $white;
-        font-family: Roboto;
         padding-left: 40px;
+        font-family: Shrikhand;
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-top: 18px;
 
-        @media (min-width:768px) {
-            width: 20%;
-            display: contents;
-
+        @media (min-width:1024px) {
+            padding-right: 10px;
         }
+    }
+}
+
+ul {
+    margin: 0;
+
+    @media (min-width:1024px) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
 
     }
 
-    & .choice .logo_footer {
+
+    & li {
+        list-style: none;
         display: flex;
 
-        @media (min-width:768px) {
-            margin-right: 40%;
-            display: contents;
+        @media (min-width:1024px) {
+            gap: 10px;
 
         }
-    }
 
-    & .choice img {
-        display: flex;
-        position: relative;
-        left: 15px;
-
-        @media (min-width:768px) {
+        & i {
+            margin-right: 15px;
+            width: 10px;
+            color: $white;
             display: flex;
-            padding-right: 1%;
-            padding-left: 1%;
-            margin-right: -2%;
+            font-size: 13px;
+
+            @media (min-width:1024px) {
+
+                font-size: 15px;
+
+            }
+
         }
     }
 
-    & .mentions {
+    a {
         color: $white;
-        padding-left: 5%;
-        display: flex;
-        padding-bottom: 3%;
-
-        @media (min-width:768px) {
-            display: flex;
-        }
-    }
-
-    & .contact {
-        padding-left: 5%;
-        color: $white;
-        display: flex;
-
-        @media (min-width:768px) {
-            margin-top: -30%;
-            font-size: smaller;
-        }
     }
 }
