@@ -35,57 +35,63 @@
             & i {
                 display: flex;
                 align-items: center;
-
             }
-        }
-    }
 
-    & li {
-        position: relative;
-        list-style-type: none;
-        background-color: $background;
-        padding: 20px 20px;
-        flex-grow: 1;
-        border-radius: 16px;
-        box-shadow: 2px 1px 7px -3px $lightgrey;
-
-
-
-        @media (min-width:768px) {
-            display: flex;
-            font-size: 13px;
         }
 
-        &::before {
-            /*content obligatoire même vide sinon ça marche pas*/
-            content: counter(section);
-            counter-increment: section;
-            color: white;
-            display: grid;
-            place-items: center;
-            justify-content: center;
-            background-color: $primary;
-            border-radius: 50%;
-            position: absolute;
-            left: -6px;
-            width: 20px;
-            height: 20px;
 
-            @media (min-width:768px) {
-                top: 20px;
-            }
-        }
-
-        & i.fas {
-            margin-right: 16px;
-            color: $lightgrey;
-            font-size: 18px;
-            padding-left: 3%;
+        & li {
+            position: relative;
+            list-style-type: none;
+            background-color: $background;
+            padding: 20px 20px;
+            flex-grow: 1;
+            border-radius: 16px;
+            box-shadow: 2px 1px 7px -3px $lightgrey;
 
             &:hover {
-                color: $primary;
+                cursor: pointer;
+                transition: 0.5s;
+                transform: scale(1.02);
             }
-        }
 
+            @media (min-width:768px) {
+                display: flex;
+                font-size: 13px;
+            }
+
+            &::before {
+                /*content obligatoire même vide sinon ça marche pas*/
+                content: counter(section);
+                counter-increment: section;
+                color: white;
+                display: grid;
+                place-items: center;
+                justify-content: center;
+                background-color: $primary;
+                border-radius: 50%;
+                position: absolute;
+                left: -6px;
+                width: 20px;
+                height: 20px;
+
+                @media (min-width:768px) {
+                    top: 20px;
+                }
+            }
+
+            & i.fas {
+                margin-right: 16px;
+                color: $lightgrey;
+                font-size: 18px;
+                padding-left: 3%;
+
+                &:hover {
+                    color: $primary;
+
+                }
+            }
+
+        }
     }
 }

@@ -50,6 +50,7 @@
         border-radius: 20px;
         position: relative;
 
+
         span {
             display: flex;
             position: absolute;
@@ -89,32 +90,50 @@
     }
 
     .heart {
+        & .far {
+            z-index: 3;
+            color: $black;
+            background-color: $white;
+            opacity: 1;
 
+            &:hover {
+                opacity: 0;
+                transition: 500ms;
+            }
+        }
 
+        & .fas {
+            z-index: 2;
+            /*background: linear-gradient(150deg, $primary, $secondary);*/
+            background-clip: text;
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+
+    /*.heart {
         & i {
             @include heart-far;
             color: black;
-            transition: all 1s ease-out;
-        }
 
+        }
 
         & .fas {
             color: transparent;
 
-        }
 
-
-        &:hover .fas {
-            @include heart-fas-hover;
-
-        }
-    }
-
-    .heart:not(:hover) {
-        @include heart-fas-hover;
-
-    }
+            &:hover {
+                @include heart-fas-hover;
+                transition: all 1s ease-out;
+            }
+        }*/
 }
+
+
+/*&:not(:hover .fas) {
+    @include heart-fas-hover;
+}*/
+
 
 
 

@@ -123,6 +123,7 @@
             text-transform: uppercase;
             /*mettre le texte en majuscule*/
             font-weight: lighter;
+            /*écriture moins grasse*/
 
             @media (min-width:768px) {
                 margin-left: 150px;
@@ -147,6 +148,12 @@
         .menus-category {
             border-radius: 10px;
 
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
 
             @media (min-width:768px) {
                 margin-left: 150px;
@@ -165,85 +172,83 @@
                 background-color: $white;
                 box-shadow: 2px 1px 7px -3px $lightgrey;
                 border-radius: 10px;
-                text-overflow: ellipsis;
-                /*...*/
+
+            }
+
+
+
+            @media (min-width:768px) {
+                padding: 0.5%;
+                padding-right: 0;
+            }
+
+            .price {
+                margin-left: auto;
+                font-weight: 900;
+                padding: 10px;
+                display: flex;
+                align-items: flex-end;
+
+            }
+
+            .menu-item__description {
+                padding: 10px;
+                font-size: 12px;
+                overflow: hidden;
                 white-space: nowrap;
+                text-overflow: ellipsis;
 
-
-                @for $i from 1 through 3 {
-                    &:nth-child(#{$i}) {
-                        animation-delay: 100ms * $i;
-                        text-overflow: ellipsis;
-                    }
+                &:hover {
+                    cursor: pointer;
                 }
 
 
+            }
+
+
+            .menu-item__clic {
+                display: grid;
+                place-items: center;
+                background-color: $tertiary;
+                margin-right: -25px;
+                width: 25px;
+                border-radius: 0 10px 10px 0;
+                transition: margin-right 0.5s;
+                height: auto;
 
                 @media (min-width:768px) {
-                    padding: 0.5%;
-                    padding-right: 0;
-                }
-
-                .price {
-                    margin-left: auto;
-                    font-weight: 900;
-                    padding: 10px;
-                    display: flex;
-                    align-items: flex-end;
-                    text-overflow: ellipsis;
-                }
-
-                .menu-item__description {
-                    padding: 10px;
-                    font-size: 12px;
-                    text-overflow: ellipsis;
-                }
-
-
-                .menu-item__clic {
-                    display: grid;
-                    place-items: center;
-                    background-color: $tertiary;
-                    margin-right: -25px;
-                    width: 25px;
-                    border-radius: 0 10px 10px 0;
-                    transition: margin-right 0.5s;
                     height: auto;
-                    text-overflow: ellipsis;
-
-                    @media (min-width:768px) {
-                        height: auto;
-                        margin-top: -10px;
-                        margin-bottom: -10px;
-                    }
-
-                    i {
-                        display: grid;
-                        place-items: center;
-                        background: $white;
-                        width: 18px;
-                        border-radius: 10px;
-                        color: $tertiary;
-                    }
-                }
-
-                &:hover .menu-item__clic {
-                    margin-right: 0;
                     margin-top: -10px;
                     margin-bottom: -10px;
-                    height: auto;
-                    text-overflow: ellipsis;
                 }
 
-
-                .order {
-                    @include base-button;
+                i {
+                    display: grid;
+                    place-items: center;
+                    background: $white;
+                    width: 18px;
+                    border-radius: 10px;
+                    color: $tertiary;
                 }
             }
-        }
 
+            &:hover .menu-item__clic {
+                margin-right: 0;
+                margin-top: -10px;
+                margin-bottom: -10px;
+                height: auto;
+                width: 40px
+            }
+
+
+            .order {
+                @include base-button;
+            }
+        }
     }
+
 }
+
 
 #Page-resto .order {
     height: 10vh;

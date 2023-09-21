@@ -143,7 +143,7 @@ header {
     align-items: center;
   }
 }
-.fonctionnement li {
+.fonctionnement ol li {
   position: relative;
   list-style-type: none;
   background-color: #F6F6F6;
@@ -152,13 +152,18 @@ header {
   border-radius: 16px;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
 }
+.fonctionnement ol li:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.02);
+}
 @media (min-width: 768px) {
-  .fonctionnement li {
+  .fonctionnement ol li {
     display: flex;
     font-size: 13px;
   }
 }
-.fonctionnement li::before {
+.fonctionnement ol li::before {
   /*content obligatoire même vide sinon ça marche pas*/
   content: counter(section);
   counter-increment: section;
@@ -174,23 +179,39 @@ header {
   height: 20px;
 }
 @media (min-width: 768px) {
-  .fonctionnement li::before {
+  .fonctionnement ol li::before {
     top: 20px;
   }
 }
-.fonctionnement li i.fas {
+.fonctionnement ol li i.fas {
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 18px;
   padding-left: 3%;
 }
-.fonctionnement li i.fas:hover {
+.fonctionnement ol li i.fas:hover {
   color: #9356dc;
 }
 
 .cards {
   background-color: #F6F6F6;
   padding-bottom: 5%;
+  /*.heart {
+      & i {
+          @include heart-far;
+          color: black;
+
+      }
+
+      & .fas {
+          color: transparent;
+
+
+          &:hover {
+              @include heart-fas-hover;
+              transition: all 1s ease-out;
+          }
+      }*/
 }
 @media (min-width: 768px) {
   .cards {
@@ -273,26 +294,27 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
-.cards .heart i {
-  font-size: 25px;
-  position: absolute;
-  right: 15px;
-  top: 80%;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  color: black;
-  transition: all 1s ease-out;
+.cards .heart .far {
+  z-index: 3;
+  color: #101010;
+  background-color: #FFFFFF;
+  opacity: 1;
+}
+.cards .heart .far:hover {
+  opacity: 0;
+  transition: 500ms;
 }
 .cards .heart .fas {
+  z-index: 2;
+  /*background: linear-gradient(150deg, $primary, $secondary);*/
+  background-clip: text;
   color: transparent;
-}
-.cards .heart:hover .fas {
-  background-image: linear-gradient(150deg, #9356dc, #ff79da);
-}
-.cards .heart:not(:hover) {
-  background-image: linear-gradient(150deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
 }
 
+/*&:not(:hover .fas) {
+    @include heart-fas-hover;
+}*/
 .card {
   flex-grow: 1;
 }
@@ -497,6 +519,7 @@ ul a {
   text-transform: uppercase;
   /*mettre le texte en majuscule*/
   font-weight: lighter;
+  /*écriture moins grasse*/
   /*pseudo-element pour petite barre verte sous titre*/
 }
 @media (min-width: 768px) {
@@ -521,6 +544,12 @@ ul a {
 .main-resto .menus .menus-category {
   border-radius: 10px;
 }
+.main-resto .menus .menus-category::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 @media (min-width: 768px) {
   .main-resto .menus .menus-category {
     margin-left: 150px;
@@ -540,42 +569,31 @@ ul a {
   background-color: #FFFFFF;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 10px;
-  text-overflow: ellipsis;
-  /*...*/
-  white-space: nowrap;
-}
-.main-resto .menus .menus-category .menu-item:nth-child(1) {
-  animation-delay: 100ms;
-  text-overflow: ellipsis;
-}
-.main-resto .menus .menus-category .menu-item:nth-child(2) {
-  animation-delay: 200ms;
-  text-overflow: ellipsis;
-}
-.main-resto .menus .menus-category .menu-item:nth-child(3) {
-  animation-delay: 300ms;
-  text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
-  .main-resto .menus .menus-category .menu-item {
+  .main-resto .menus .menus-category {
     padding: 0.5%;
     padding-right: 0;
   }
 }
-.main-resto .menus .menus-category .menu-item .price {
+.main-resto .menus .menus-category .price {
   margin-left: auto;
   font-weight: 900;
   padding: 10px;
   display: flex;
   align-items: flex-end;
-  text-overflow: ellipsis;
 }
-.main-resto .menus .menus-category .menu-item .menu-item__description {
+.main-resto .menus .menus-category .menu-item__description {
   padding: 10px;
   font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main-resto .menus .menus-category .menu-item .menu-item__clic {
+.main-resto .menus .menus-category .menu-item__description:hover {
+  cursor: pointer;
+}
+.main-resto .menus .menus-category .menu-item__clic {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
@@ -584,16 +602,15 @@ ul a {
   border-radius: 0 10px 10px 0;
   transition: margin-right 0.5s;
   height: auto;
-  text-overflow: ellipsis;
 }
 @media (min-width: 768px) {
-  .main-resto .menus .menus-category .menu-item .menu-item__clic {
+  .main-resto .menus .menus-category .menu-item__clic {
     height: auto;
     margin-top: -10px;
     margin-bottom: -10px;
   }
 }
-.main-resto .menus .menus-category .menu-item .menu-item__clic i {
+.main-resto .menus .menus-category .menu-item__clic i {
   display: grid;
   place-items: center;
   background: #FFFFFF;
@@ -601,14 +618,14 @@ ul a {
   border-radius: 10px;
   color: #99E2D0;
 }
-.main-resto .menus .menus-category .menu-item:hover .menu-item__clic {
+.main-resto .menus .menus-category:hover .menu-item__clic {
   margin-right: 0;
   margin-top: -10px;
   margin-bottom: -10px;
   height: auto;
-  text-overflow: ellipsis;
+  width: 40px;
 }
-.main-resto .menus .menus-category .menu-item .order {
+.main-resto .menus .menus-category .order {
   padding: 18px;
   color: white;
   border-radius: 50px;
