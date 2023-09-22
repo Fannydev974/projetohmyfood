@@ -157,6 +157,9 @@ header {
   transition: 0.5s;
   transform: scale(1.02);
 }
+.fonctionnement ol li:hover .fas {
+  color: #9356dc;
+}
 @media (min-width: 768px) {
   .fonctionnement ol li {
     display: flex;
@@ -197,21 +200,30 @@ header {
   background-color: #F6F6F6;
   padding-bottom: 5%;
   /*.heart {
-      & i {
-          @include heart-far;
-          color: black;
+       & .far {
+          z-index: 3;
+          color: $black;
+          background-color: $white;
+          opacity: 1;
+
+          &:hover {
+              opacity: 0;
+              transition: 500ms;
+          }
 
       }
 
       & .fas {
-          color: transparent;
+          z-index: 2;
+          background: linear-gradient(150deg, $primary, $secondary);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 
-
-          &:hover {
-              @include heart-fas-hover;
-              transition: all 1s ease-out;
-          }
       }*/
+  /*&:not(:hover .fas) {
+      @include heart-fas-hover;
+  }*/
 }
 @media (min-width: 768px) {
   .cards {
@@ -294,31 +306,28 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
-.cards .heart .far {
-  z-index: 3;
-  color: #101010;
-  background-color: #FFFFFF;
-  opacity: 1;
+.cards .heart i .far {
+  font-size: 25px;
+  position: absolute;
+  right: 15px;
+  top: 80%;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: black;
 }
-.cards .heart .far:hover {
-  opacity: 0;
-  transition: 500ms;
+.cards .heart i .far:hover {
+  transition: all 1s ease-out;
 }
 .cards .heart .fas {
-  z-index: 2;
-  /*background: linear-gradient(150deg, $primary, $secondary);*/
-  background-clip: text;
   color: transparent;
-  -webkit-background-clip: text;
 }
-
-/*&:not(:hover .fas) {
-    @include heart-fas-hover;
-}*/
-.card {
+.cards .heart .fas:hover {
+  transition: 500ms;
+}
+.cards .card {
   flex-grow: 1;
 }
-.card img {
+.cards .card img {
   width: 100%;
   height: 170px;
   background-size: cover;
@@ -327,7 +336,7 @@ header {
   object-fit: cover;
 }
 @media (min-width: 768px) {
-  .card img {
+  .cards .card img {
     height: 251px;
     width: 490px;
     object-fit: cover;
@@ -543,6 +552,9 @@ ul a {
 }
 .main-resto .menus .menus-category {
   border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  /*pour faire disparaitre ce qui dépasse du cadre*/
 }
 .main-resto .menus .menus-category::after {
   content: "";
@@ -587,7 +599,13 @@ ul a {
   padding: 10px;
   font-size: 12px;
   overflow: hidden;
+  /*pour faire disparaitre ce qui dépasse du cadre*/
+}
+.main-resto .menus .menus-category .menu-item__description h4,
+.main-resto .menus .menus-category .menu-item__description p {
   white-space: nowrap;
+  overflow: hidden;
+  /*pour faire disparaitre ce qui dépasse du cadre*/
   text-overflow: ellipsis;
 }
 .main-resto .menus .menus-category .menu-item__description:hover {
@@ -602,6 +620,8 @@ ul a {
   border-radius: 0 10px 10px 0;
   transition: margin-right 0.5s;
   height: auto;
+  flex-shrink: 0;
+  /*interdiction de retrecir*/
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category .menu-item__clic {
@@ -686,6 +706,7 @@ ul a {
     transform: scale(1);
   }
 }
+/***loader***/
 @keyframes disappear {
   0% {
     transform: scale(1);
