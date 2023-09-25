@@ -11,7 +11,6 @@
 }
 
 
-
 .banner img {
     display: block;
     width: 100%;
@@ -33,13 +32,14 @@
         margin-left: 15%;
         margin-right: 15%;
         padding-top: 60px;
+        justify-content: center;
     }
 
     h2 {
         position: relative;
         font-family: "shrikhand", "cursive";
         padding: 10px;
-        padding-top: 40px;
+        padding-top: 35px;
         padding-bottom: 30px;
 
         @media (min-width:768px) {
@@ -47,50 +47,20 @@
             justify-content: center;
         }
     }
-}
 
-
-.heart {
-    position: relative;
-    display: flex;
-    bottom: 60px;
-    top: -40px;
-    -webkit-background-clip: text;
-    background-clip: text;
-
-
-
-    @media (min-width:768px) {
-        position: relative;
+    .hearth {
         display: flex;
-        justify-content: flex-end;
-    }
-
-
-    & i {
-        @include heart-far;
-
+        align-items: center;
+        padding-right: 12%;
 
         @media (min-width:768px) {
-            display: flex;
+            padding-right: 10%;
         }
     }
-
-    & .fas {
-        color: transparent;
-
-    }
-
-    &:hover .fas {
-        @include heart-fas-hover;
-        animation-name: heart;
-        animation-duration: 1s;
-
-
-    }
-
-
 }
+
+
+
 
 .main-resto {
     display: flex;
@@ -200,7 +170,11 @@
                 padding: 10px;
                 font-size: 12px;
                 overflow: hidden;
+
                 /*pour faire disparaitre ce qui dépasse du cadre*/
+                @media (min-width:768px) {
+                    font-size: 18px;
+                }
 
                 h4,
                 p {
@@ -223,10 +197,9 @@
                 display: grid;
                 place-items: center;
                 background-color: $tertiary;
-                margin-right: -25px;
-                width: 25px;
+                width: 0;
                 border-radius: 0 10px 10px 0;
-                transition: margin-right 0.5s;
+                transition: width 0.5s;
                 height: auto;
                 flex-shrink: 0;
 
@@ -248,11 +221,10 @@
             }
 
             &:hover .menu-item__clic {
-                margin-right: 0;
                 margin-top: -10px;
                 margin-bottom: -10px;
                 height: auto;
-                width: 40px
+                width: 20%;
             }
 
 

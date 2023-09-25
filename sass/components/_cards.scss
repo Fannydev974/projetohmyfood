@@ -74,13 +74,13 @@
             margin-bottom: 2%;
         }
 
-        & h3 {
+        h3 {
             margin-bottom: 2%;
             padding-left: 2%;
             color: $black;
         }
 
-        & .places {
+        .places {
             padding-left: 2%;
             margin-bottom: 3%;
             color: $black;
@@ -89,65 +89,24 @@
 
     }
 
-    /*.heart {
-         & .far {
-            z-index: 3;
-            color: $black;
-            background-color: $white;
-            opacity: 1;
-
-            &:hover {
-                opacity: 0;
-                transition: 500ms;
-            }
-
-        }
-
-        & .fas {
-            z-index: 2;
-            background: linear-gradient(150deg, $primary, $secondary);
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-
-        }*/
-
-
-
-
-    .heart {
-
-        & i .far {
-            @include heart-far;
-            color: black;
-
-            &:hover {
-                transition: all 1s ease-out;
-            }
-        }
-
-        & .fas {
-            color: transparent;
-
-            &:hover {
-                transition: 500ms;
-            }
-
-        }
-
-    }
-
-    /*&:not(:hover .fas) {
-    @include heart-fas-hover;
-}*/
-
-
-
-
-
-
     .card {
         flex-grow: 1;
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+
+
+            &__title {
+                width: 90%;
+
+            }
+
+            .hearth {
+                width: 10%;
+            }
+
+        }
 
 
         & img {

@@ -9,7 +9,7 @@
     }
 
 
-    & h1.logo {
+    h1.logo {
         color: $white;
         padding-left: 40px;
         font-family: Shrikhand;
@@ -34,7 +34,7 @@ ul {
     }
 
 
-    & li {
+    li {
         list-style: none;
         display: flex;
 
@@ -43,7 +43,7 @@ ul {
 
         }
 
-        & i {
+        i {
             margin-right: 15px;
             width: 10px;
             color: $white;

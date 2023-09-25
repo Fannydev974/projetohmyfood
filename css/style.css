@@ -199,31 +199,6 @@ header {
 .cards {
   background-color: #F6F6F6;
   padding-bottom: 5%;
-  /*.heart {
-       & .far {
-          z-index: 3;
-          color: $black;
-          background-color: $white;
-          opacity: 1;
-
-          &:hover {
-              opacity: 0;
-              transition: 500ms;
-          }
-
-      }
-
-      & .fas {
-          z-index: 2;
-          background: linear-gradient(150deg, $primary, $secondary);
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-
-      }*/
-  /*&:not(:hover .fas) {
-      @include heart-fas-hover;
-  }*/
 }
 @media (min-width: 768px) {
   .cards {
@@ -306,26 +281,18 @@ header {
   margin-bottom: 3%;
   color: #101010;
 }
-.cards .heart i .far {
-  font-size: 25px;
-  position: absolute;
-  right: 15px;
-  top: 80%;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  color: black;
-}
-.cards .heart i .far:hover {
-  transition: all 1s ease-out;
-}
-.cards .heart .fas {
-  color: transparent;
-}
-.cards .heart .fas:hover {
-  transition: 500ms;
-}
 .cards .card {
   flex-grow: 1;
+}
+.cards .card__content {
+  display: flex;
+  justify-content: space-between;
+}
+.cards .card__content__title {
+  width: 90%;
+}
+.cards .card__content .hearth {
+  width: 10%;
 }
 .cards .card img {
   width: 100%;
@@ -443,13 +410,14 @@ ul a {
     margin-left: 15%;
     margin-right: 15%;
     padding-top: 60px;
+    justify-content: center;
   }
 }
 .resto__title h2 {
   position: relative;
   font-family: "shrikhand", "cursive";
   padding: 10px;
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 30px;
 }
 @media (min-width: 768px) {
@@ -458,42 +426,15 @@ ul a {
     justify-content: center;
   }
 }
-
-.heart {
-  position: relative;
+.resto__title .hearth {
   display: flex;
-  bottom: 60px;
-  top: -40px;
-  -webkit-background-clip: text;
-  background-clip: text;
+  align-items: center;
+  padding-right: 12%;
 }
 @media (min-width: 768px) {
-  .heart {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
+  .resto__title .hearth {
+    padding-right: 10%;
   }
-}
-.heart i {
-  font-size: 25px;
-  position: absolute;
-  right: 15px;
-  top: 80%;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-}
-@media (min-width: 768px) {
-  .heart i {
-    display: flex;
-  }
-}
-.heart .fas {
-  color: transparent;
-}
-.heart:hover .fas {
-  background-image: linear-gradient(150deg, #9356dc, #ff79da);
-  animation-name: heart;
-  animation-duration: 1s;
 }
 
 .main-resto {
@@ -601,6 +542,11 @@ ul a {
   overflow: hidden;
   /*pour faire disparaitre ce qui dépasse du cadre*/
 }
+@media (min-width: 768px) {
+  .main-resto .menus .menus-category .menu-item__description {
+    font-size: 18px;
+  }
+}
 .main-resto .menus .menus-category .menu-item__description h4,
 .main-resto .menus .menus-category .menu-item__description p {
   white-space: nowrap;
@@ -615,10 +561,9 @@ ul a {
   display: grid;
   place-items: center;
   background-color: #99E2D0;
-  margin-right: -25px;
-  width: 25px;
+  width: 0;
   border-radius: 0 10px 10px 0;
-  transition: margin-right 0.5s;
+  transition: width 0.5s;
   height: auto;
   flex-shrink: 0;
   /*interdiction de retrecir*/
@@ -639,11 +584,10 @@ ul a {
   color: #99E2D0;
 }
 .main-resto .menus .menus-category:hover .menu-item__clic {
-  margin-right: 0;
   margin-top: -10px;
   margin-bottom: -10px;
   height: auto;
-  width: 40px;
+  width: 20%;
 }
 .main-resto .menus .menus-category .order {
   padding: 18px;
@@ -698,14 +642,6 @@ ul a {
     opacity: 1;
   }
 }
-@keyframes heart {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /***loader***/
 @keyframes disappear {
   0% {
@@ -716,10 +652,34 @@ ul a {
   }
 }
 @keyframes spin {
-  /*on est pas obligé de mettre 0% {} le navigateur saura automatiquement ce que c'est*/
+  /*on est pas obligé de mettre 0% {} le navigateur sera que c'est automatiquement ce que c'est*/
   100% {
     transform: rotate(360deg);
   }
+}
+.hearth i {
+  font-size: 25px;
+  position: absolute;
+}
+.hearth .far {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.hearth .fas {
+  opacity: 0;
+  transition: opacity 1s;
+  background: linear-gradient(150deg, #9356dc, #ff79da);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hearth:hover .far {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hearth:hover .fas {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

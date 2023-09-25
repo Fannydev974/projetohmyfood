@@ -10,17 +10,6 @@
     }
 }
 
-@keyframes heart {
-    0% {
-        transform: scale(0);
-
-    }
-
-    100% {
-        transform: scale(1);
-
-    }
-}
 
 
 /***loader***/
@@ -36,7 +25,7 @@
 
 @keyframes spin {
 
-    /*on est pas obligé de mettre 0% {} le navigateur saura automatiquement ce que c'est*/
+    /*on est pas obligé de mettre 0% {} le navigateur sera que c'est automatiquement ce que c'est*/
     100% {
         transform: rotate(360deg);
     }
