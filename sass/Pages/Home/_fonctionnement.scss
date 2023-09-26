@@ -51,8 +51,7 @@
 
             &:hover {
                 cursor: pointer;
-                transition: 0.5s;
-                transform: scale(1.02);
+
 
                 & .fas {
                     color: $primary;

@@ -154,8 +154,6 @@ header {
 }
 .fonctionnement ol li:hover {
   cursor: pointer;
-  transition: 0.5s;
-  transform: scale(1.02);
 }
 .fonctionnement ol li:hover .fas {
   color: #9356dc;
