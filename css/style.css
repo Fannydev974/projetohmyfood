@@ -522,6 +522,7 @@ ul a {
   background-color: #FFFFFF;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 10px;
+  animation: appear 2s;
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category {
@@ -664,6 +665,7 @@ ul a {
 .hearth .far {
   opacity: 1;
   transition: opacity 1s;
+  color: #101010;
 }
 .hearth .fas {
   opacity: 0;
