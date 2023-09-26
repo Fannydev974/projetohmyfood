@@ -451,15 +451,19 @@ ul a {
 }
 .main-resto .menus {
   background-color: #F6F6F6;
-  display: grid;
   gap: 25px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .main-resto .menus {
     padding-top: 1px;
     width: 70%;
   }
+}
+.main-resto .menus .menu_animation {
+  animation: appear 2s;
+  animation-fill-mode: both;
 }
 .main-resto .menus h3 {
   position: relative;
@@ -496,6 +500,7 @@ ul a {
   white-space: nowrap;
   overflow: hidden;
   /*pour faire disparaitre ce qui dépasse du cadre*/
+  padding-bottom: 10px;
 }
 .main-resto .menus .menus-category::after {
   content: "";
@@ -522,7 +527,6 @@ ul a {
   background-color: #FFFFFF;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
   border-radius: 10px;
-  animation: appear 2s;
 }
 @media (min-width: 768px) {
   .main-resto .menus .menus-category {
@@ -635,12 +639,10 @@ ul a {
 
 @keyframes appear {
   0% {
-    transform: translateY(-50%);
-    opacity: 0;
+    transform: scale(0);
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: scale(1);
   }
 }
 /***loader***/
