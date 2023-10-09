@@ -414,7 +414,7 @@ ul a {
   margin-top: -40px;
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .resto__title {
@@ -441,11 +441,6 @@ ul a {
   display: flex;
   align-items: center;
   padding-right: 0;
-}
-@media (min-width: 768px) {
-  .resto__title .hearth {
-    padding-right: 10%;
-  }
 }
 
 .main-resto {

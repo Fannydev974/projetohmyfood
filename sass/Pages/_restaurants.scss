@@ -25,7 +25,7 @@
     margin-top: -40px;
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 
 
     @media (min-width:768px) {
@@ -53,9 +53,6 @@
         align-items: center;
         padding-right: 0;
 
-        @media (min-width:768px) {
-            padding-right: 10%;
-        }
     }
 }
 
