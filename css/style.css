@@ -150,12 +150,20 @@ header {
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 7px -3px #7e7e7e;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  /*&:hover {
+      cursor: pointer;
+
+
+      & .fas {
+          color: $primary;
+      }
+  }*/
 }
-.fonctionnement ol li:hover {
-  cursor: pointer;
-}
-.fonctionnement ol li:hover .fas {
-  color: #9356dc;
+.fonctionnement ol li .fa-mobile-alt::before {
+  padding-right: 4px;
 }
 @media (min-width: 768px) {
   .fonctionnement ol li {
@@ -188,8 +196,12 @@ header {
   color: #7e7e7e;
   font-size: 18px;
   padding-left: 3%;
+  /*&:hover {
+      color: $primary;
+
+  }*/
 }
-.fonctionnement ol li i.fas:hover {
+.fonctionnement ol li i.fa-store {
   color: #9356dc;
 }
 
@@ -289,7 +301,9 @@ header {
   width: 90%;
 }
 .cards .card__content .hearth {
-  width: 10%;
+  width: max-content;
+  height: 25px;
+  margin-right: 10%;
 }
 .cards .card img {
   width: 100%;
@@ -400,7 +414,7 @@ ul a {
   margin-top: -40px;
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 @media (min-width: 768px) {
   .resto__title {
@@ -426,7 +440,7 @@ ul a {
 .resto__title .hearth {
   display: flex;
   align-items: center;
-  padding-right: 12%;
+  padding-right: 0;
 }
 @media (min-width: 768px) {
   .resto__title .hearth {
@@ -461,6 +475,7 @@ ul a {
 .main-resto .menus .menu_animation {
   animation: appear 2s;
   animation-fill-mode: both;
+  /*Pour que ça reste a la fin*/
 }
 .main-resto .menus h3 {
   position: relative;
@@ -642,6 +657,7 @@ ul a {
     transform: scale(1);
   }
 }
+/*Apparition des menus cartes restaurants*/
 /***loader***/
 @keyframes disappear {
   0% {

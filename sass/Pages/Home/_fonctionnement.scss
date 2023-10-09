@@ -48,15 +48,22 @@
             flex-grow: 1;
             border-radius: 16px;
             box-shadow: 2px 1px 7px -3px $lightgrey;
+            font-weight: 500;
+            display: flex;
+            justify-content: flex-start;
 
-            &:hover {
+            .fa-mobile-alt::before {
+                padding-right: 4px;
+            }
+
+            /*&:hover {
                 cursor: pointer;
 
 
                 & .fas {
                     color: $primary;
                 }
-            }
+            }*/
 
             @media (min-width:768px) {
                 display: flex;
@@ -89,10 +96,14 @@
                 font-size: 18px;
                 padding-left: 3%;
 
-                &:hover {
+                /*&:hover {
                     color: $primary;
 
-                }
+                }*/
+            }
+
+            & i.fa-store {
+                color: $primary;
             }
 
         }

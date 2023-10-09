@@ -103,7 +103,9 @@
             }
 
             .hearth {
-                width: 10%;
+                width: max-content;
+                height: 25px;
+                margin-right: 10%;
             }
 
         }
